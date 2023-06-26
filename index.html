@@ -200,7 +200,30 @@ p.contact {
 .pics {
   float: right;
 }
+.scrollerImg{
+        display: inline-block;
+        height: 80vh;
+    }
 
+.scrollerBtn{
+  display: inline-block;
+  height: 80vh;
+  width:50px;
+  font-size: 5vh;
+  background-color:black;
+  color: white;
+  transition-duration: 0.7s;
+    }
+.scrollerBtn:hover{
+  background-color: white;
+  color: black;
+}
+
+.scroller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Media Queries */
 
 @media (min-width: 768px) {
@@ -341,7 +364,21 @@ p.contact {
 </div>
 </div>
 <div class="start"></div>
-<div class="about" id="work">Work in progress</div>
+
+<div class="about" id="work">
+
+  <div class="scroller">
+    <button class="scrollerBtn" onclick="btnLeft()"><</button>
+    <a href="https://drive.google.com/file/d/1wu1zKdN2nT2UP-VMwKAbNCz_pQ_La9bO/view?usp=sharing"><img src="Brb.png" onclick="malaSlika(0)" id="slike" class="scrollerImg" alt=""></a>
+    <button class="scrollerBtn"  onclick="btnRight()">></button>
+  </div>
+
+<div class="aboutHeader">BrickBreaker Game</div>
+<br>   
+ 
+ 
+ <p class="aboutText">Im too lazy to add menu and exit button</p>
+</div>
 <div class="start"></div>
 </body>
 </html>
