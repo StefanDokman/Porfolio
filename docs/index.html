@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefan Dokman</title>
+    <script>
+        function printLetterByLetter(destination, speed){
+            const messages = ["Freelancer","GameDev","WebDev"]; 
+            var i = 0;
+            var j = 0;
+            var interval = setInterval(function(){
+            document.getElementById(destination).innerHTML += messages[j].charAt(i);
+            i++;
+            if (i > messages[j].length){
+                i=0;
+               document.getElementById(destination).innerHTML = "";
+                if(j<=2){j++;}
+                if(j>2) {j=0;}}
+            }, speed);
+            
+            }
+        
+        printLetterByLetter("aboutAnimated", 300);
+    </script>
+
+    <style>
+html,body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: StevenDockman;
+  src: url(Brunches-Round.woff);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#black {
+  background-color: black;
+  color: white;
+}
+
+#white {
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+.start {
+  width: 40vw;
+  height: 100vh;
+  position: relative;
+  z-index: -999;
+}
+
+.quote {
+  font-family: StevenDockman;
+  text-align: center;
+  margin-top: -1vw;
+  font-size: 2.5vw;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 33%;
+  z-index: -1;
+}
+
+#logo {
+  width: 60%;
+  margin-top: 10%;
+  margin-bottom: 0px;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.about {
+  width: auto;
+  max-width: 100%;
+  overflow-x: hidden; /* Add this line */
+  background-color: rgb(43, 43, 43);
+  position: relative;
+  padding: 5% 10%;
+}
+
+.aboutImg {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  max-height: 100%;
+  margin-right: 5%;
+  object-fit: contain;
+  float: left;
+}
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutHeader {
+  font-family: Verdana;
+  font-size: calc(0.75em + 5vmin);
+  margin-top: 5%;
+  flex-basis: 100%;
+}
+
+.aboutText {
+  font-family: Verdana;
+  font-size: calc(0.75em + 2vmin);
+  word-break: break-word;
+  width: 100%;
+  flex-basis: calc(100% - 45%);
+}
+
+
+.aboutAnimated {
+  font-family: Verdana;
+  font-size: calc(0.75em + 8vmin);
+  height: calc(0.75em + 8vmin);
+  flex-basis: 100%;
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  height: 13vh;
+  line-height: 5vh;
+  z-index: 2;
+  background-color: black;
+}
+
+.navbarItem {
+  font-family: StevenDockman;
+  margin-top: 4vh;
+  /* width: 10vw; */
+  height: 5vh;
+  left: 190px; /* Adjust the value as per your preference */
+  text-align: center;
+  position: fixed;
+}
+
+.navbarItem1 {
+  font-family: StevenDockman;
+  margin-top: 4vh;
+  left: 290px; /* Adjust the value as per your preference */
+  /* width: 10vw; */
+  height: 5vh;
+  text-align: center;
+  position: fixed;
+}
+
+
+
+.navbarItemSquare {
+  margin-left: auto;
+  margin-right: auto;
+  width: 0%;
+  background-color: red;
+  height: 10%;
+  transition-property: width;
+  transition-duration: 0.3s;
+}
+
+.navbarItem:hover .navbarItemSquare {
+  width: 100%;
+}
+
+.navbarItem1:hover .navbarItemSquare {
+  width: 100%;
+}
+
+.logos {
+  margin-top: 3vh;
+  height: 7vh;
+  position: fixed;
+}
+
+p.contact {
+  font-size: 5vw;
+  text-align: center;
+  font-family: Verdana;
+}
+
+.insta {
+  width: 3vw;
+  margin: 1vw;
+}
+
+.pics {
+  float: right;
+}
+.scrollerImg{
+        display: inline-block;
+        height: 80vh;
+    }
+
+.scrollerBtn{
+  display: inline-block;
+  height: 80vh;
+  width:50px;
+  font-size: 5vh;
+  background-color:black;
+  color: white;
+  transition-duration: 0.7s;
+    }
+.scrollerBtn:hover{
+  background-color: white;
+  color: black;
+}
+
+.scroller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .aboutImg {
+  height: auto;
+  width: 100%;
+  max-width: calc(70vw - 45%);
+  margin-right: 5%;
+  object-fit: contain;
+  float: left;
+}
+
+
+  .aboutHeader {
+    flex-basis: 55%;
+  }
+
+  .aboutText {
+    flex-basis: 55%;
+  }
+
+  .aboutAnimated {
+    flex-basis: 55%;
+  }
+}
+@media (max-width: 320px) {
+  #logo {
+
+  margin-top: 30%;
+
+}
+}
+@media (max-width: 767px) {
+  .aboutImg {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 5%;
+    float: none;
+  }
+  #logo {
+  width: 60%;
+  margin-top: 20%;
+  margin-bottom: 0px;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.quote {
+  font-family: StevenDockman;
+  text-align: center;
+  margin-top: -1vw;
+  font-size: 2.5vw;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 47%;
+  z-index: -1;
+}
+  .navbarItem {
+  font-family: StevenDockman;
+  margin-top: 4vh;
+  /* width: 10vw; */
+  height: 5vh;
+  left: 160px; /* Adjust the value as per your preference */
+  text-align: center;
+  position: fixed;
+}
+
+.navbarItem1 {
+  font-family: StevenDockman;
+  margin-top: 4vh;
+  left: 260px; /* Adjust the value as per your preference */
+  /* width: 10vw; */
+  height: 5vh;
+  text-align: center;
+  position: fixed;
+}
+
+  .aboutHeader,
+  .aboutText,
+  .aboutAnimated {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .insta {
+    width: 8vw;
+    margin: 2vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .insta {
+    width: 5vw;
+    margin: 1.5vw;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .insta {
+    width: 4vw;
+    margin: 1vw;
+  }
+}
+
+@media (min-width: 1441px) {
+  .insta {
+    width: 3vw;
+    margin: 1vw;
+  }
+}
+
+    </style>
+</head>
+<body id="black">
+<div class="navbar">
+<a href="index.html"><img class="logos"src="LogoBlack.jpg"></a>
+<a href="#about"><span  class="navbarItem1">ABOUT<div class="navbarItemSquare"></div></span></a>
+<a href="#work"><span  class="navbarItem">WORK<div class="navbarItemSquare"></div></span></a>
+<div class="pics"><a href="https://www.instagram.com/dokman.s/"><img src="Insta.jpg" class="insta"></a></div>
+<div class="pics"><a href="https://www.linkedin.com/in/stefan-dokman-9baa9b224/"><img src="linkedinWhite.png" class="insta"></a></div>
+</div>
+
+<img id="logo"src="LogoBlack.jpg">
+<p class="quote">The closer you are to the beginning<br> the farther you are from the ending</p>
+<div class="start" id="start"></div><br>
+ 
+<div class="about" id="about">
+<img src="me2.jpeg" alt="me" class="aboutImg">
+
+<div>
+<div class="aboutHeader">ABOUT</div><br><br>
+<div class="aboutAnimated" id="aboutAnimated"></div><br>
+<p class="aboutText">My name is Stefan, passionate Game and Web Developer from Serbia. I'm experienced in making games using C# or JavaScript. I can also make websites like this one. Currently I'm studying at The School of Electrical and Computer Engineering of Applied Studies as a Computer Engineer. I'm eager for challenges and new experiences.My biggest weakness is ";" after "if".</p>
+</div>
+</div>
+<div class="start"></div>
+
+<div class="about" id="work">
+
+  <div class="scroller">
+    <button class="scrollerBtn" onclick="btnLeft()"><</button>
+    <a href="https://drive.google.com/file/d/1wu1zKdN2nT2UP-VMwKAbNCz_pQ_La9bO/view?usp=sharing"><img src="Brb.png" onclick="malaSlika(0)" id="slike" class="scrollerImg" alt=""></a>
+    <button class="scrollerBtn"  onclick="btnRight()">></button>
+  </div>
+
+<div class="aboutHeader">BrickBreaker Game</div>
+<br>   
+ 
+ 
+ <p class="aboutText">Im too lazy to add menu and exit button</p>
+</div>
+<div class="start"></div>
+</body>
+</html>
