@@ -23,6 +23,46 @@
             }
         
         printLetterByLetter("aboutAnimated", 300);
+            
+        const slike = ["brb.png","frg.png","tnk.png"];
+        const linkovi = ["https://drive.google.com/file/d/1wu1zKdN2nT2UP-VMwKAbNCz_pQ_La9bO/view?usp=sharing","https://drive.google.com/file/d/1N8sEA959kOQKssnRl6PNlnsfg1KAp-yv/view?usp=sharing","https://drive.google.com/file/d/1ts3PernalHQHkomK4_g_HehpZ3EB6hIR/view?usp=sharing"];
+        const naslov =["BrickBreaker Game","Frog Game","Tank Game"];
+        const aboutTexts =["I'm too lazy to add menu and exit button","My first ever project in Unity, it's a mess","I'm too lazy to balance the game"]
+        const linkovi2 = ["https://drive.google.com/drive/folders/12QboKurVkNbCeKEDy_GlJR86o6ZrHcX9?usp=sharing","https://drive.google.com/drive/folders/1fde3jhFgn3wpvI9FyuNua0YrZuRL4KDs?usp=sharing","https://drive.google.com/drive/folders/1ix1dKEmRcpL-uUMTMsEkkeMyeXgtUvZ9?usp=sharing"]
+        var brojac = 0;
+
+        function btnLeft(){
+            if(brojac>0){
+            brojac-=1;}
+            else{
+            brojac=slike.length-1;    
+            }
+            document.getElementById("slike").src=slike[brojac];
+           var link = document.getElementById("link");
+           link.setAttribute('href', linkovi[brojac]);
+           document.getElementById("aboutHeader").innerHTML=naslov[brojac];
+           document.getElementById("aboutText").innerHTML=aboutTexts[brojac];
+           var link = document.getElementById("link2");
+           link.setAttribute('href', linkovi2[brojac]);
+
+        }
+        function btnRight(){
+            if(brojac<slike.length-1){
+            brojac+=1;}
+            else{
+            brojac=0;    
+            }
+            document.getElementById("slike").src=slike[brojac];
+            var link = document.getElementById("link");
+           link.setAttribute('href', linkovi[brojac]);
+           document.getElementById("aboutHeader").innerHTML=naslov[brojac];
+           document.getElementById("aboutText").innerHTML=aboutTexts[brojac];
+           var link = document.getElementById("link2");
+           link.setAttribute('href', linkovi2[brojac]);
+
+            
+        }
+
     </script>
 
     <style>
@@ -348,6 +388,7 @@ p.contact {
 <a href="#work"><span  class="navbarItem">WORK<div class="navbarItemSquare"></div></span></a>
 <div class="pics"><a href="https://www.instagram.com/dokman.s/"><img src="Insta.jpg" class="insta"></a></div>
 <div class="pics"><a href="https://www.linkedin.com/in/stefan-dokman-9baa9b224/"><img src="linkedinWhite.png" class="insta"></a></div>
+<div class="pics"><a href="https://github.com/StefanDokman"><img src="github.png" class="insta"></a></div>
 </div>
 
 <img id="logo"src="LogoBlack.jpg">
@@ -369,15 +410,16 @@ p.contact {
 
   <div class="scroller">
     <button class="scrollerBtn" onclick="btnLeft()"><</button>
-    <a href="https://drive.google.com/file/d/1wu1zKdN2nT2UP-VMwKAbNCz_pQ_La9bO/view?usp=sharing"><img src="Brb.png" onclick="malaSlika(0)" id="slike" class="scrollerImg" alt=""></a>
+    <a href="https://drive.google.com/file/d/1wu1zKdN2nT2UP-VMwKAbNCz_pQ_La9bO/view?usp=sharing" id="link"><img src="Brb.png" onclick="malaSlika(0)" id="slike" class="scrollerImg" alt=""></a>
     <button class="scrollerBtn"  onclick="btnRight()">></button>
   </div>
 
-<div class="aboutHeader">BrickBreaker Game</div>
+<div class="aboutHeader" id="aboutHeader">BrickBreaker Game</div>
 <br>   
  
  
- <p class="aboutText">Im too lazy to add menu and exit button</p>
+ <p class="aboutText" id="aboutText">I'm too lazy to add menu and exit button</p>
+<a href="https://drive.google.com/drive/folders/12QboKurVkNbCeKEDy_GlJR86o6ZrHcX9?usp=sharing" id="link2"> <p>This is the link to project files</p></a>
 </div>
 <div class="start"></div>
 </body>
