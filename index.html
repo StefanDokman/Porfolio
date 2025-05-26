@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stefan Dokman </title>
+<link rel="icon" href="gamepad.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #292929;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+    .social-icons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+  }
+  .social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover,
+  .social-icons a:focus {
+    color: #91C01D;
+    outline: none;
+  }
+
+  a {
+    color: #91C01D;
+    text-decoration: none !important;
+  }
+  header {
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    padding: 0 10px;
+    text-align: right;
+    padding-top: 100px;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px; 
+  }
+  header h2 {
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    font-size: 42px;
+    color: #cccccc;
+  }
+  .about {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 10px;
+  }
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .block.normal {
+    flex-direction: row;
+  }
+  .block.reversed {
+    flex-direction: row-reverse;
+  }
+
+  .video-container, .content {
+    flex: 1 1 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .content h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    
+  }
+  .content ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  .content ul li {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+nav {
+  background-color: #292929;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  z-index: 5;
+  margin-top: -25px;
+  align-items: center;  /* vertically center content */
+  padding: 0 20px;      /* optional: spacing inside */
+}
+.img-tilted-bg {
+  position: absolute;
+  top: -50px;           /* adjust as needed */
+  left: 20%;
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0.1;          /* faded background effect */
+  z-index: -1;           /* background layer */
+  pointer-events: none;  /* lets user click through it */
+  width: 600px;          /* adjust size as needed */
+  max-width: 100%;
+}
+  @media (max-width: 600px) {
+    .social-icons {
+      position: static;
+      justify-content: center;
+      margin-bottom: 15px;
+      gap: 15px;
+    }
+    header {
+      text-align: center;
+      margin: 20px 10px 30px 10px;
+    }
+    header h1 {
+      font-size: 36px;
+    }
+    header h2 {
+      font-size: 24px;
+    }
+    .about {
+      font-size: 13px;
+      margin: 0 10px 30px 10px;
+    }
+    .block {
+      flex-direction: column !important;
+    }
+    .video-container, .content {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .content h2 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .content ul li {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+    <nav class="social-icons" aria-label="Social media links">
+        <a href="www.linkedin.com/in/stefandokman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i> Linkedin
+        </a>
+        <a href="https://github.com/StefanDokman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i> Github
+        </a>
+        <a href="mailto:stefandokman@hotmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i> Mail
+        </a>
+       <!---- <a href="https://www.instagram.com/dokman.s/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>-->
+        <a href="https://drive.google.com/file/d/13zfdRQER3K4Gaa1YY5rB3lVT7zjoK1Nw/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="CV">
+            <i class="fas fa-file-alt"></i> CV
+          </a>
+      </nav>
+      
+  <header>
+    <h1 >Stefan Dokman</h1>
+    <h2>Game Developer</h2>
+  </header>
+  <img src="gamepad.png" class="img-tilted-bg" alt="Background image">
+  <section class="about" aria-label="About section">
+    <p style="text-align: left;">
+      I’m a software developer with over 2 years of Unity experience and a solid background in backend development. I’ve worked with tools like Unity, C#, PHP, MySQL, and more. Right now, I’m focusing on expanding up my backend skills while finishing my Bachelor’s in Computer Engineering, and I’m planning to start a Master’s soon.<br><br>
+
+      My college education gave me a strong foundation in C++ and programming fundamentals, and real projects helped me build practical skills. I’m flexible and enjoy taking on different kinds of development challenges.<br><br>
+
+      I’m always open to new opportunities that help me grow, so feel free to reach out!
+    </p>
+  </section>
+  <div class="container">
+    <div class="block normal">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>First Person Shooter</b></h2>
+        
+          First Person Shooter developed in Unity 3D using C#, featuring a custom physics system for movement. The game uses Unity’s built-in collision detection for accurate hit registration, and recoil is simulated through manual calculations. Unity colliders handle interactions between the player, enemies, and the environment. There are two weapon types: one fully automatic and the other semi-automatic, plus grenades that trigger an expanding collider when they hit the floor. Enemies use a simple "move toward the player" script; one type can pass through walls and floors, while the other can’t.
+             <a href="">Link to Github Repo</a>
+        
+      </div>
+    </div>
+
+
+   <div class="block reversed">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="CandyCrush.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>Candy Crush</b></h2>
+        This is a Candy Crush-style match-3 game with smooth, flowing animations. The game manages candy swaps, matches, and board updates in a carefully timed sequence, using timers to coordinate the animation flow. This method ensures gameplay stays fluid and responsive while keeping the visuals and game state well synchronized for an enjoyable experience.
+             <a href="">Link to Github Repo</a>
+
+      </div>
+    </div>
+
+
+
+    <div class="block normal">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="Platformer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>Platformer</b></h2>
+        I implemented custom physics to handle 3D movement and jumping mechanics, leveraging Unity’s collision detection for interactions with terrain, platforms, and obstacles. The levels were designed with dynamic elements like moving platforms, rotating traps, and vertical challenges. Player controls are responsive, allowing for mid-air adjustments. To ensure smooth performance, I optimized the game using fixed update physics and minimized collision checks.
+            <a href="">Link to Github Repo</a>
+
+      </div>
+    </div>
+
+ 
+
+
+        <div class="block reversed">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="Tank.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>Tank</b></h2>
+        I created a 2D tank game featuring a unique time-slow mechanic that adds strategic depth to gameplay. The tank controls are smooth and responsive, allowing players to maneuver effectively. Enemies constantly spawn just outside the camera view, keeping the action intense and unpredictable. The shooting system includes bullets with a limited lifetime, ensuring balanced combat and optimal performance throughout the game.
+            <a href="">Link to Github Repo</a>
+      </div>
+    </div>
+
+   <div class="block normal">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="BrickBreaker.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>Brick Breaker</b></h2>
+       I developed a brick breaker game where all gameplay mechanics are handled manually using object positioning and trigonometry. Instead of relying on built-in physics, I calculated ball movement, collision angles, and reflections by applying trigonometric functions. This approach gave me full control over the game's behavior and allowed precise handling of ball trajectories and interactions with bricks and paddles.
+            <a href="">Link to Github Repo</a>
+      </div>
+    </div>
+
+   <div class="block reversed">
+      <div class="video-container">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="Frog.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content">
+        <h2><b>Platformer</b></h2>
+       I developed a 2D platformer in Unity using its Physics2D system to create realistic movement and interactions. The game features moving platforms and falling block traps. It includes a variety of enemies, some that run, others that fly, and some that shoot, adding diversity to the gameplay.
+            <a href="">Link to Github Repo</a>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
