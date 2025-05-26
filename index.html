@@ -116,14 +116,20 @@
     line-height: 1.5;
   }
 nav {
-  background-color: #292929;
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 41, 41, 1), 
+    rgba(41, 41, 41, 0)   
+  );
+
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter: blur(3px); 
   width: 100%;
   top: 0;
   height: 80px;
   z-index: 5;
   margin-top: -25px;
-  align-items: center;  /* vertically center content */
-  padding: 0 20px;      /* optional: spacing inside */
+  align-items: center; 
 }
 .img-tilted-bg {
   position: absolute;
@@ -131,7 +137,7 @@ nav {
   left: 20%;
   transform: translateX(-50%) rotate(45deg);
   opacity: 0.1;          /* faded background effect */
-  z-index: -1;           /* background layer */
+  z-index: -20;           /* background layer */
   pointer-events: none;  /* lets user click through it */
   width: 600px;          /* adjust size as needed */
   max-width: 100%;
