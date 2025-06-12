@@ -8,45 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = Array.from(document.querySelectorAll("video[data-src]"));
-  let currentIndex = 0;
-  const batchSize = 2;
-
-  const loadVideo = video => {
-    if (!video || video.querySelector("source")) return;
-    const src = video.getAttribute("data-src");
-    const source = document.createElement("source");
-    source.src = src;
-    source.type = "video/mp4";
-    video.appendChild(source);
-    video.load();
-  };
-
-  const loadNextBatch = () => {
-    for (let i = 0; i < batchSize && currentIndex < videos.length; i++, currentIndex++) {
-      loadVideo(videos[currentIndex]);
-      observer.observe(videos[currentIndex]); 
-    }
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        observer.unobserve(entry.target);
-        loadNextBatch(); 
-      }
-    });
-  }, {
-    root: null,
-    threshold: 0.1
-  });
-
-  loadNextBatch();
-});
-</script>
-
 <style>
   * {
     box-sizing: border-box;
