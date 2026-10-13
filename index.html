@@ -1,257 +1,39 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Stefan Dokman – Game Developer</title>
 <meta name="description" content="Stefan Dokman is a Game Developer and Software Engineer with 2+ years of Unity experience and a strong backend foundation. Learn more about Stefan's projects and skills.">
-<link rel="icon" href="gamepad.png" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-
-<script>
-  window.addEventListener("load", function () {
-    document.getElementById("loader-wrapper").style.display = "none";
-    document.getElementById("content").style.display = "block";
-  });
-</script>
-
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    background-color: #292929;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-  }
-    .social-icons {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    gap: 20px;
-    z-index: 1000;
-  }
-  .social-icons a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .social-icons a:hover,
-  .social-icons a:focus {
-    color: #91C01D;
-    outline: none;
-  }
-
-  a {
-    color: #91C01D;
-    text-decoration: none !important;
-  }
-  header {
-    max-width: 900px;
-    margin: 20px auto 40px auto;
-    padding: 0 10px;
-    text-align: right;
-    padding-top: 100px;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 64px; 
-  }
-  header h2 {
-    margin: 5px 0 0 0;
-    font-weight: 400;
-    font-size: 42px;
-    color: #cccccc;
-  }
-  .about {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    padding: 0 10px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #ddd;
-  }
-  p{
-    font-size: 15px;
-    line-height: 1.6;
-    color: #ddd;
-    text-align: justify;
-  }
-  .container {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 10px;
-  }
-  .block {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .block.normal {
-    flex-direction: row;
-  }
-  .block.reversed {
-    flex-direction: row-reverse;
-  }
-
-  .video-container, .content {
-    flex: 1 1 300px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .content h2 {
-    font-weight: 700;
-    font-size: 18px;
-    margin: 0 0 4px 0;
-    
-  }
-  .content p{
-    margin:4px 0 4px 0;
-  }
-nav {
-  background: 
-    rgba(41, 41, 41, 0.8); 
-
-  backdrop-filter:blur(1px);
-  -webkit-backdrop-filter: blur(1px); 
-  width: 100%;
-  top: 0;
-  height: 80px;
-  z-index: 5;
-  margin-top: -25px;
-  padding-left: 20px;
-  margin-left: -20px;
-  align-items: center; 
-}
-.img-tilted-bg {
-  position: absolute;
-  top: -50px;      
-  left: 20%;
-  transform: translateX(-50%) rotate(45deg);
-  opacity: 0.1;      
-  z-index: -20;          
-  pointer-events: none; 
-  width: 600px;         
-  max-width: 100%;
-}
-
-.techCategory{
-  color:rgb(163, 163, 163);
-}
-
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #292929;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#loader {
-  width: 50px;
-  height: 50px;
-  border: 6px solid #91C01D;
-  border-top-color: #ddd;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-  @media (max-width: 600px) {
-    .social-icons {
-      position: static;
-      justify-content: center;
-      margin-bottom: 15px;
-      gap: 15px;
-    }
-    header {
-      text-align: center;
-      margin: 20px 10px 30px 10px;
-    }
-    header h1 {
-      font-size: 36px;
-    }
-    header h2 {
-      font-size: 24px;
-    }
-    .about {
-      font-size: 13px;
-      margin: 0 10px 30px 10px;
-    }
-    .block {
-      flex-direction: column !important;
-    }
-    .video-container, .content {
-      max-width: 100%;
-      flex: 1 1 100%;
-    }
-    .content h2 {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-    .content ul li {
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-  }
-</style>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="preload" href="neuroblast.html" as="fetch" crossorigin>
+<link rel="preload" as="image" href="posters/fps.webp" type="image/webp">
 </head>
 <body>
-    <div id="loader-wrapper">
-    <div id="loader"></div>
-  </div>
-  <div id="content" style="display: none;">
+  <nav class="social-icons" aria-label="Social media links">
+    <a href="https://linkedin.com/in/stefandokman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v16h-4V8zm7.5 0h3.83v2.19h.05c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13V24h-4v-7.88c0-1.88-.03-4.3-2.62-4.3-2.62 0-3.02 2.05-3.02 4.17V24h-4V8z"/></svg> Linkedin
+    </a>
+    <a href="https://github.com/StefanDokman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> Github
+    </a>
+    <a href="mailto:stefandokman@hotmail.com" aria-label="Email">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2.4V18h20V6.4l-10 6.25L2 6.4zM3.6 6 12 11.25 20.4 6H3.6z"/></svg> Mail
+    </a>
+    <a href="https://drive.google.com/file/d/13zfdRQER3K4Gaa1YY5rB3lVT7zjoK1Nw/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="CV">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 0H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-8-8zm6 22H4V2h9v7h7v13zM7 13h10v2H7v-2zm0 4h10v2H7v-2zm0-8h4v2H7V9z"/></svg> CV
+    </a>
+  </nav>
 
-    <nav class="social-icons" aria-label="Social media links">
-        <a href="https://linkedin.com/in/stefandokman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i> Linkedin
-        </a>
-        <a href="https://github.com/StefanDokman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github"></i> Github
-        </a>
-        <a href="mailto:stefandokman@hotmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i> Mail
-        </a>
-       <!---- <a href="https://www.instagram.com/dokman.s/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>-->
-        <a href="https://drive.google.com/file/d/13zfdRQER3K4Gaa1YY5rB3lVT7zjoK1Nw/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="CV">
-            <i class="fas fa-file-alt"></i> CV
-          </a>
-      </nav>
-      
   <header>
     <h1 >Stefan Dokman</h1>
     <h2>Game Developer</h2>
   </header>
-  <img src="gamepad.png" class="img-tilted-bg" alt="Background image">
+  <img src="gamepad.webp" class="img-tilted-bg" alt="" width="474" height="474" decoding="async">
   <section class="about" aria-label="About section">
     <p style="text-align: justify;">
 I first started learning programming in my second year of high school, and it wasn’t long before I began making games. My first project was a 2D platformer, which I’ve kept on this page as a reminder of how much I’ve grown.
@@ -263,139 +45,57 @@ College helped me deepen my understanding of algorithms, memory, and core progra
 If you have any questions about my projects or just want to connect, feel free to reach out!
     </p>
   </section>
-  <div class="container">
-    <div class="block normal">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>First Person Shooter</b></h2>
-        <div class="techCategory">Unity</div>
-          <p>First Person Shooter, featuring a custom physics system for movement. The Game simulates recoil through manual calculations. There are two weapon types: one fully automatic and the other semi-automatic, plus grenades that trigger an expanding collider when they hit the floor. Enemies use a simple "move toward the player" script; one type can pass through walls and floors, while the other can’t.</p>
-             <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/c2846fb561ae84e45f5a2157c5c8980ad88ddd7e/FPS">Link to Github Repo</a>
-        
-      </div>
-    </div>
+  <nav class="page-tabs" aria-label="Pages">
+    <a href="#Personal Projects" data-page="personal-projects">Personal Projects</a>
+    <a href="#neuroblast" data-page="neuroblast">Neuroblast</a>
+  </nav>
+  <main id="projects" class="container"></main>
 
+  <script>
+    (function () {
+      var container = document.getElementById('projects');
+      var tabs = document.querySelectorAll('.page-tabs a');
+      var pages = { 'personal-projects': 'personal-projects.html', 'neuroblast': 'neuroblast.html' };
+      var cache = {};
+      var current = null;
 
-   <div class="block reversed">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="CandyCrush.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Match 3</b></h2>
-        <div class="techCategory">Unity</div>
-        <p>This is a Candy Crush-style match-3 game with smooth, flowing animations. The game manages candy swaps, matches, and board updates in a carefully timed sequence, using timers to coordinate the animation flow. This method ensures gameplay stays fluid and responsive while keeping the visuals and game state well synchronized for an enjoyable experience.</p>
-             <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/9ccb6984f81105d85a881be0401a4378267debf4/Candy%20Crush">Link to Github Repo</a>
+      function load(name) {
+        if (!pages[name]) name = 'personal-projects';
+        if (name === current) return;
+        current = name;
 
-      </div>
-    </div>
+        tabs.forEach(function (t) {
+          if (t.dataset.page === name) t.setAttribute('aria-current', 'page');
+          else t.removeAttribute('aria-current');
+        });
 
-   <div class="block normal">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="infRunner.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Endless Runner</b></h2>
-        <div class="techCategory">Unity</div>
-        <p>An Endless Runner game built using only object locations for gameplay logic, without Unity’s physics system.
-Uses Unity’s Animator for animation state handling, a window-based obstacle spawning algorithm, and a custom shader for a curving effect, lighting, and object outlines.
-Although the track appears curved, all objects move in straight lines, curvature is purely visual, handled entirely in the shader.</p>
-             <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/main/Endless%20Runner">Link to Github Repo</a>
+        var html = cache[name]
+          ? Promise.resolve(cache[name])
+          : fetch(pages[name]).then(function (r) {
+              if (!r.ok) throw new Error(r.status);
+              return r.text();
+            });
 
-      </div>
-    </div>
+        html.then(function (text) {
+          cache[name] = text;
+          if (current !== name) return; // another tab was clicked meanwhile
+          container.innerHTML = text;
+          // make sure inserted videos start, even where autoplay on injected media is flaky
+          container.querySelectorAll('video').forEach(function (v) {
+            v.muted = true;
+            var p = v.play();
+            if (p) p.catch(function () {});
+          });
+        }).catch(function () {
+          container.innerHTML = '<p>Could not load projects. Please refresh the page.</p>';
+        });
+      }
 
-
-    <div class="block reversed">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="Platformer.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Platformer 3D</b></h2>
-        <div class="techCategory">Unity</div>
-        <p>I implemented custom physics to handle 3D movement and jumping mechanics, leveraging Unity’s collision detection for interactions with terrain, platforms, and obstacles. The levels were designed with dynamic elements like moving platforms, rotating traps, and vertical challenges. Player controls are responsive, allowing for mid-air adjustments.</p>
-            <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/c2846fb561ae84e45f5a2157c5c8980ad88ddd7e/Platformer">Link to Github Repo</a>
-
-      </div>
-    </div>
-
- 
-
-
-        <div class="block normal">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="Tank.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Twin Stick Shooter</b></h2>
-        <div class="techCategory">Unity</div>
-        <p>I created a 2D tank game featuring a unique time-slow mechanic implemented using Time.timeScale. The tank controls are made by rotating player and moving only forward or backward. Enemies constantly spawn just outside the camera view. The shooting system also includes bullets with a limited lifetime.</p>
-            <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/9ccb6984f81105d85a881be0401a4378267debf4/Tank">Link to Github Repo</a>
-      </div>
-    </div>
-
-   <div class="block reversed">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="BrickBreaker.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Brick Breaker</b></h2>
-        <div class="techCategory">Unity</div>
-       <p>I developed a brick breaker game where all gameplay mechanics are handled manually using object positioning and trigonometry. Instead of relying on built-in physics, I calculated ball movement, collision angles, and reflections by applying trigonometric functions. This approach gave me full control over the game's behavior and allowed precise handling of ball trajectories and interactions with bricks and paddles.</p>
-            <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/9ccb6984f81105d85a881be0401a4378267debf4/Brick%20Breaker">Link to Github Repo</a>
-      </div>
-    </div>
-
-   <div class="block normal">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="Frog.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Platformer 2D</b></h2>
-        <div class="techCategory">Unity</div>
-       <p>I developed a 2D platformer in Unity using its Physics2D system to create realistic movement and interactions. The game features moving platforms and falling block traps. It includes a variety of enemies, some that run, others that fly, and some that shoot, adding diversity to the gameplay.</p>
-            <a href="https://github.com/StefanDokman/Unity-Game-Scripts/tree/9ccb6984f81105d85a881be0401a4378267debf4/Frog">Link to Github Repo</a>
-      </div>
-    </div>
-
-       <div class="block reversed">
-      <div class="video-container">
-        <video class="lazy-video" autoplay muted loop playsinline preload="auto">
-          <source src="Card.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="content">
-        <h2><b>Texture Erosion Shader</b></h2>
-        <div class="techCategory">HLSL</div>
-       <p>This shader applies a directional erosion effect using a mask texture to gradually erode the main texture. The erosion blends between two customizable colors and follows a bias direction in UV space, allowing for directional control. The erosion amount is controlled by _RevealValue and is gradually blended using _FeatherlValue to produce a smooth transitional gradient.</p>
-            <a href="https://github.com/StefanDokman/Unity-Game-Scripts/blob/main/Shaders/ErosionShader.shader">Link to Github Repo</a>
-      </div>
-    </div>
-  </div>
-</div>
-  
+      window.addEventListener('hashchange', function () {
+        load(location.hash.slice(1));
+      });
+      load(location.hash.slice(1));
+    })();
+  </script>
 </body>
 </html>
