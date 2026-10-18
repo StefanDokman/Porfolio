@@ -9,7 +9,8 @@ body {
   color: white;
   overflow-x: hidden;
 }
-
+.block:not(:has(video, img)) .video-container { display: none; }
+.block:not(:has(video, img)) .content { max-width: 100%; flex-basis: 100%; }
 /* ---------- Top links ---------- */
 .social-icons {
   position: fixed;
