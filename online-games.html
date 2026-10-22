@@ -9,6 +9,6 @@
     <h2><b>Flip 7</b></h2>
     <div class="techCategory">TypeScript · PixiJS · Cloudflare Workers</div>
     <p>A multiplayer web version of the Flip 7 card game, built in TypeScript with a PixiJS client and a server-authoritative backend on Cloudflare Workers. Each room is its own Durable Object that owns the deck and the full rules engine, so clients only send intents (hit, stay, flip, give a card) and never see the draw order. State is saved after every action and idle rooms hibernate through the WebSocket Hibernation API, so a game survives refreshes and lost connections without using any server time while nobody is playing. Turn timers and a silent removal countdown for players who drop out run on server alarms, which keeps the table moving. The rules are covered by unit tests and 400 fuzzed full games that check no card is ever lost or duplicated.</p>
-    <a href="mailto:stefandokman@hotmail.com?subject=About%20Flip%207">Ask me about this project</a>
+    <a href="https://flip7.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
   </div>
 </div>
