@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  TARGET: https://porfolio.stefandokman.com
+  TARGET: https://portfolio.stefandokman.com
 
 jobs:
   deploy:
