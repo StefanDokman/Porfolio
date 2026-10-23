@@ -1,0 +1,64 @@
+# GitHub Pages now only serves redirect stubs pointing at the Cloudflare-hosted site.
+# The real site is deployed by Cloudflare straight from this repo.
+# Requires: Settings -> Pages -> Source = "GitHub Actions".
+name: Pages redirect
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  TARGET: https://porfolio.stefandokman.com
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build redirect stubs
+        run: |
+          mkdir -p _site
+          stub() { # $1 = output file, $2 = target path
+            cat > "_site/$1" <<EOF
+          <!doctype html>
+          <html><head><meta charset="utf-8">
+          <title>Moved</title>
+          <link rel="canonical" href="$TARGET/$2">
+          <meta http-equiv="refresh" content="0; url=$TARGET/$2">
+          <script>location.replace("$TARGET/$2" + location.search + location.hash);</script>
+          </head><body><a href="$TARGET/$2">This site has moved to $TARGET/$2</a></body></html>
+          EOF
+          }
+          for f in *.html; do
+            [ "$f" = "index.html" ] && stub index.html "" || stub "$f" "$f"
+          done
+          # Anything else (videos, old links): strip the /RepoName/ prefix and send it over.
+          cat > _site/404.html <<EOF
+          <!doctype html>
+          <html><head><meta charset="utf-8"><title>Moved</title>
+          <script>
+            var p = location.pathname.split("/").slice(2).join("/");
+            location.replace("$TARGET/" + p + location.search + location.hash);
+          </script></head><body><a href="$TARGET/">This site has moved to $TARGET</a></body></html>
+          EOF
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
