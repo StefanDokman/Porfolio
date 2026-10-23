@@ -12,3 +12,18 @@
     <a href="https://flip7.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
   </div>
 </div>
+
+<div class="block reversed">
+  <div class="video-container">
+    <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/Holdem.webp">
+      <source src="Holdem.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="content">
+    <h2><b>Hold'em</b></h2>
+    <div class="techCategory">JavaScript · PixiJS · Cloudflare Workers</div>
+    <p>Online Texas Hold'em for up to 10 players, with a PixiJS client and a server-authoritative backend on Cloudflare Workers. Each table is a Durable Object that runs the full rules engine (raises, side pots, all-in runouts, split pots) and sends each player a view with only their own hole cards. The host sets starting chips, the starting blinds and the level where the blinds stop doubling. Turn timers run on server alarms: a player who disconnects is checked or folded automatically, and is removed if they're still gone when they have to act in the next hand. The rules are covered by unit tests and 500 random full games that check no chips are ever created or lost.</p>
+    <a href="https://holdem.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
+  </div>
+</div>
