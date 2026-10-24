@@ -60,6 +60,18 @@ If you have any questions about my projects or just want to connect, feel free t
       var pages = { 'personal-projects': 'personal-projects.html', 'neuroblast': 'neuroblast.html', 'code-havoc': 'code-havoc.html', 'online-games': 'online-games.html' };
       var cache = {};
       var current = null;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) {
+            if (!v.getAttribute('src')) v.src = v.dataset.src;
+            var p = v.play();
+            if (p) p.catch(function () {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { rootMargin: '300px 0px' });
 
       function load(name) {
         if (!pages[name]) name = 'neuroblast';
@@ -81,12 +93,12 @@ If you have any questions about my projects or just want to connect, feel free t
         html.then(function (text) {
           cache[name] = text;
           if (current !== name) return; // another tab was clicked meanwhile
+          io.disconnect(); // stop watching videos from the previous tab
           container.innerHTML = text;
-          // make sure inserted videos start, even where autoplay on injected media is flaky
-          container.querySelectorAll('video').forEach(function (v) {
+          // videos load and play only when near the screen, and pause when scrolled away
+          container.querySelectorAll('video[data-src]').forEach(function (v) {
             v.muted = true;
-            var p = v.play();
-            if (p) p.catch(function () {});
+            io.observe(v);
           });
         }).catch(function () {
           container.innerHTML = '<p>Could not load projects. Please refresh the page.</p>';
