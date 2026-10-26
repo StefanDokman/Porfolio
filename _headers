@@ -9,3 +9,17 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+# Tab fragments are loaded into index.html by JS; keep them out of search results.
+/code-havoc.html
+  X-Robots-Tag: noindex
+/neuroblast.html
+  X-Robots-Tag: noindex
+/online-games.html
+  X-Robots-Tag: noindex
+/personal-projects.html
+  X-Robots-Tag: noindex
+
+# Cloudflare's *.pages.dev preview address duplicates the site; keep it out of search.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
