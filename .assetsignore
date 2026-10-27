@@ -1,0 +1,4 @@
+# Cloudflare uploads the repo root as the site; keep repo internals off the web.
+.git
+.github
+.assetsignore
