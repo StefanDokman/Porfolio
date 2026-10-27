@@ -59,8 +59,10 @@ If you have any questions about my projects or just want to connect, feel free t
       var container = document.getElementById('projects');
       var tabs = document.querySelectorAll('.page-tabs a');
       var pages = { 'personal-projects': 'personal-projects.html', 'neuroblast': 'neuroblast.html', 'code-havoc': 'code-havoc.html', 'online-games': 'online-games.html' };
-      var cache = {};
+      var panels = {};
       var current = null;
+      // videos load and play only when near the screen, and pause when scrolled away;
+      // videos in hidden tabs never intersect, so they don't download until their tab is opened
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           var v = e.target;
@@ -74,7 +76,28 @@ If you have any questions about my projects or just want to connect, feel free t
         });
       }, { rootMargin: '300px 0px' });
 
-      function load(name) {
+      // All tabs are loaded up front into hidden panels, so crawlers that render the page
+      // (like Google) see every section, not just the one that is open.
+      Object.keys(pages).forEach(function (name) {
+        var panel = document.createElement('div');
+        panel.hidden = true;
+        container.appendChild(panel);
+        panels[name] = panel;
+        fetch(pages[name]).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        }).then(function (text) {
+          panel.innerHTML = text;
+          panel.querySelectorAll('video[data-src]').forEach(function (v) {
+            v.muted = true;
+            io.observe(v);
+          });
+        }).catch(function () {
+          panel.innerHTML = '<p>Could not load projects. Please refresh the page.</p>';
+        });
+      });
+
+      function show(name) {
         if (!pages[name]) name = 'neuroblast';
         if (name === current) return;
         current = name;
@@ -83,33 +106,15 @@ If you have any questions about my projects or just want to connect, feel free t
           if (t.dataset.page === name) t.setAttribute('aria-current', 'page');
           else t.removeAttribute('aria-current');
         });
-
-        var html = cache[name]
-          ? Promise.resolve(cache[name])
-          : fetch(pages[name]).then(function (r) {
-              if (!r.ok) throw new Error(r.status);
-              return r.text();
-            });
-
-        html.then(function (text) {
-          cache[name] = text;
-          if (current !== name) return; // another tab was clicked meanwhile
-          io.disconnect(); // stop watching videos from the previous tab
-          container.innerHTML = text;
-          // videos load and play only when near the screen, and pause when scrolled away
-          container.querySelectorAll('video[data-src]').forEach(function (v) {
-            v.muted = true;
-            io.observe(v);
-          });
-        }).catch(function () {
-          container.innerHTML = '<p>Could not load projects. Please refresh the page.</p>';
+        Object.keys(panels).forEach(function (n) {
+          panels[n].hidden = n !== name;
         });
       }
 
       window.addEventListener('hashchange', function () {
-        load(location.hash.slice(1));
+        show(location.hash.slice(1));
       });
-      load(location.hash.slice(1));
+      show(location.hash.slice(1));
     })();
   </script>
 </body>
