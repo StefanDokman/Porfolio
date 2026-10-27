@@ -132,6 +132,15 @@ p {
   gap: 40px;
   padding: 0 10px;
 }
+/* each tab's blocks live in their own panel; keep the same spacing as .container */
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.tab-panel[hidden] {
+  display: none;
+}
 .block {
   display: flex;
   flex-wrap: wrap;
