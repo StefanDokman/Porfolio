@@ -94,6 +94,7 @@ If you have any questions about my projects or just want to connect, feel free t
       // (like Google) see every section, not just the one that is open.
       Object.keys(pages).forEach(function (name) {
         var panel = document.createElement('div');
+        panel.className = 'tab-panel';
         panel.hidden = true;
         container.appendChild(panel);
         panels[name] = panel;
