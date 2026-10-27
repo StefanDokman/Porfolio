@@ -2,7 +2,7 @@
 
 > Stefan Dokman is a Unity gameplay developer with 4 years of experience shipping mobile games, with strong shader and rendering skills for low-end Android. He also builds multiplayer web games with PixiJS on Cloudflare Workers.
 
-The portfolio at https://portfolio.stefandokman.com loads its project tabs with JavaScript, so this file lists the same projects as plain text. Commercial titles can't be linked: Neuroblast games ship through the company's own Android platform, and Code Havoc titles are under NDA.
+This file summarizes the projects on the portfolio at https://portfolio.stefandokman.com as plain text. Commercial titles can't be linked: Neuroblast games ship through the company's own Android platform, and Code Havoc titles are under NDA.
 
 ## Contact
 
