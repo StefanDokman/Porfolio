@@ -1,25 +1,27 @@
 /*.mp4
   Cache-Control: public, max-age=31536000, immutable
 
-/posters/*
-  Cache-Control: public, max-age=31536000, immutable
-
+# Covers /posters/*.webp too (a separate /posters/* rule sent the header twice).
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
 # Tab fragments are loaded into index.html by JS; keep them out of search results.
-/code-havoc.html
+# Cloudflare serves pages without the .html extension (/neuroblast.html -> /neuroblast),
+# so the rules must match the extensionless paths.
+/code-havoc
   X-Robots-Tag: noindex
-/neuroblast.html
+/neuroblast
   X-Robots-Tag: noindex
-/online-games.html
+/online-games
   X-Robots-Tag: noindex
-/personal-projects.html
+/personal-projects
   X-Robots-Tag: noindex
 
-# Cloudflare's *.pages.dev preview address duplicates the site; keep it out of search.
-https://:project.pages.dev/*
+# Placeholder page, not linked from the site yet. Remove this once it has real content.
+/projects
+  X-Robots-Tag: noindex
+
+# The site is deployed as a Worker, so its *.workers.dev address (and preview URLs)
+# duplicates the site; keep it out of search.
+https://:worker.:account.workers.dev/*
   X-Robots-Tag: noindex

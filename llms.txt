@@ -1,0 +1,55 @@
+# Stefan Dokman – Game Developer
+
+> Stefan Dokman is a Unity gameplay developer with 4 years of experience shipping mobile games, with strong shader and rendering skills for low-end Android. He also builds multiplayer web games with PixiJS on Cloudflare Workers.
+
+The portfolio at https://portfolio.stefandokman.com loads its project tabs with JavaScript, so this file lists the same projects as plain text. Commercial titles can't be linked: Neuroblast games ship through the company's own Android platform, and Code Havoc titles are under NDA.
+
+## Contact
+
+- [LinkedIn](https://linkedin.com/in/stefandokman)
+- [GitHub](https://github.com/StefanDokman)
+- Email: stefandokman@hotmail.com
+
+## Neuroblast · Unity Developer · Aug 2025 – Present
+
+Therapeutic games for motor-skill recovery, played with Neuroblast's Motus controller and Aequa balance board. He owns games end to end, from prototype to release, working with artists on gameplay, shaders and UI. Company site: https://theneuroblast.com
+
+- Honey Road: infinite 3D runner with a vertex shader that curves the whole screen, distance-based sunset shading, Ackermann steering, a custom lighting model, dithered transparency and object pooling.
+- World Traveler: city driving game with custom LOD solutions, a configurable vehicle controller, a custom lighting model and a camera rig with handmade speculative collision detection.
+- Turtle Quest: 2D infinite runner with parallax backgrounds and a vertex shader for 2D water waves.
+- Gear Up: vertical jumping game with Bézier-curve animations and a UI height meter synced to gameplay.
+- Fluffy Rush: Dino-style runner with custom jump and hit physics.
+- Space Scout: 2D space runner with object pooling and gameplay modifiers.
+- Pick It Up: shelf-placing exercise game built on a ScriptableObject-driven architecture.
+- Fairy: balancing game with particle effects and a unified mathematical model for its mechanics.
+
+## Code Havoc · Unity Developer · 2022 – 2025
+
+Outsourced mobile games for external clients, shipped to Android with 200,000+ combined downloads. Core gameplay, UI, game logic, device-specific bugs and performance across Android hardware, plus ads, audio and VFX integration. Titles are under NDA, so the names are descriptive.
+
+- Golf: PhysX-based ball flight and rolling, an auto-following camera rig, touch aiming and shot power.
+- Match 3: swap matching, cascades and semi-procedural levels with hand-placed special blocks.
+- Brick Breaker: custom ball physics with angle-based paddle control and data-driven levels.
+- Runner: level-based runner generated from designed segments, with rewarded, interstitial and banner ads built into the loop.
+- Car Puzzle: sliding-block car puzzle with grid movement and snapping touch controls.
+- Block Puzzle: Block Blast-style puzzle with placement validation, combo scoring and game-over detection.
+- Backgammon: full rules engine, animated dice and checkers, touch controls with move highlighting.
+
+## Web Games (multiplayer, PixiJS + Cloudflare Workers)
+
+Each game is server-authoritative: every room or table is a Durable Object running the full rules engine, with turn timers on server alarms and fuzz-tested rules.
+
+- [Flip 7](https://flip7.stefandokman.com): TypeScript card game; clients only send intents and never see the draw order; rooms hibernate via the WebSocket Hibernation API.
+- [Hold'em](https://holdem.stefandokman.com): Texas Hold'em for up to 10 players with side pots, all-in runouts and split pots; each player only receives their own hole cards.
+- [Blackjack](https://blackjack.stefandokman.com): up to 7 players vs. the dealer, 6-deck shoe, splitting up to four hands, invite links and basic-strategy bots.
+
+## Earlier Projects (Unity, HLSL)
+
+- First Person Shooter: custom kinematic movement controller; weapons and enemies defined by ScriptableObjects.
+- Match 3: board logic separated from presentation with a phase-based, timer-driven sequencer (rebuilt from scratch outside the NDA).
+- Endless Runner: deterministic, physics-free gameplay with a single-pass toon shader that curves the world, pooled track segments and a sliding-window spawner.
+- Platformer 3D: custom movement with Unity collision, moving platforms, baked lightmaps and light probes.
+- Twin Stick Shooter: tank controls and a time-slow ability built on unscaled delta time, with off-screen ring spawning.
+- Brick Breaker: physics-free ball movement and reflection using his own vector math (rebuilt from scratch outside the NDA).
+- Platformer 2D: his first game, built with Physics2D, moving platforms and several enemy types.
+- Texture Erosion Shader: HLSL dissolve shader with a noise mask, direction bias and a two-colour burn edge in one texture sample.
