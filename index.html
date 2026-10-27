@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<script>document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Stefan Dokman – Game Developer</title>
 <meta name="description" content="Stefan Dokman is a Unity gameplay developer with 4 years of experience shipping mobile games, with strong shader and rendering skills for low-end Android.">
@@ -75,7 +76,7 @@ If you have any questions about my projects or just want to connect, feel free t
     <a href="#personal-projects" data-page="personal-projects">Earlier Projects</a>
   </nav>
   <main id="projects" class="container">
-    <div class="tab-panel" id="panel-neuroblast" data-panel="neuroblast">
+    <div class="tab-panel active" id="panel-neuroblast" data-panel="neuroblast">
       <div class="tab-intro">
         <p><b>Neuroblast · Unity Developer · Aug 2025 – Present</b><br>
         Therapeutic games for motor-skill recovery, played with Neuroblast's Motus controller and Aequa balance board and distributed through the company's own Android platform. I own games end to end, from prototype to release, working closely with artists on gameplay, shaders and UI.</p>
@@ -169,7 +170,7 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
         </div>
     </div>
-    <div class="tab-panel" id="panel-code-havoc" data-panel="code-havoc" hidden>
+    <div class="tab-panel" id="panel-code-havoc" data-panel="code-havoc">
       <div class="tab-intro">
         <p><b>Code Havoc · Unity Developer · 2022 – 2025</b><br>
         Outsourced mobile games for external clients, shipped to Android with 200,000+ combined downloads. I built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Titles are under NDA, so the names below are descriptive.</p>
@@ -266,7 +267,7 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
       </div>
     </div>
-    <div class="tab-panel" id="panel-online-games" data-panel="online-games" hidden>
+    <div class="tab-panel" id="panel-online-games" data-panel="online-games">
       <div class="block normal">
         <div class="video-container">
           <video aria-label="Gameplay video of Flip 7" muted loop playsinline preload="none" data-src="Flip7.mp4" width="852" height="480" poster="posters/Flip7.webp"></video>
@@ -303,7 +304,7 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
       </div>
     </div>
-    <div class="tab-panel" id="panel-personal-projects" data-panel="personal-projects" hidden>
+    <div class="tab-panel" id="panel-personal-projects" data-panel="personal-projects">
       <div class="block normal">
         <div class="video-container">
           <video aria-label="Gameplay video of First Person Shooter" muted loop playsinline preload="none" data-src="fps.mp4" width="852" height="480" poster="posters/fps.webp"></video>
@@ -437,8 +438,8 @@ If you have any questions about my projects or just want to connect, feel free t
         io.observe(v);
       });
 
-      // All tab content is in the HTML (so crawlers that don't run JavaScript see it);
-      // tabs only switch which panel is visible.
+      // All tab content is in the HTML and none of it is marked hidden, so crawlers and
+      // article extractors see every section; CSS hides inactive tabs only when JS runs.
       function show(name) {
         if (!document.querySelector('[data-panel="' + name + '"]')) name = 'neuroblast';
         if (name === current) return;
@@ -448,7 +449,7 @@ If you have any questions about my projects or just want to connect, feel free t
           else t.removeAttribute('aria-current');
         });
         panels.forEach(function (p) {
-          p.hidden = p.dataset.panel !== name;
+          p.classList.toggle('active', p.dataset.panel === name);
         });
       }
 
