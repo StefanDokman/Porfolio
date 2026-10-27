@@ -138,7 +138,8 @@ p {
   flex-direction: column;
   gap: 40px;
 }
-.tab-panel[hidden] {
+/* inactive tabs are hidden only when JS is running (html.js), so crawlers see all of them */
+.js .tab-panel:not(.active) {
   display: none;
 }
 .block {
