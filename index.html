@@ -34,7 +34,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<link rel="preload" href="neuroblast.html" as="fetch" crossorigin>
 <link rel="preload" as="image" href="posters/fps.webp" type="image/webp">
 </head>
 <body>
@@ -75,14 +74,349 @@ If you have any questions about my projects or just want to connect, feel free t
     <a href="#online-games" data-page="online-games">Web Games</a>
     <a href="#personal-projects" data-page="personal-projects">Earlier Projects</a>
   </nav>
-  <main id="projects" class="container"></main>
+  <main id="projects" class="container">
+    <div class="tab-panel" id="panel-neuroblast" data-panel="neuroblast">
+      <div class="tab-intro">
+        <p><b>Neuroblast · Unity Developer · Aug 2025 – Present</b><br>
+        Therapeutic games for motor-skill recovery, played with Neuroblast's Motus controller and Aequa balance board and distributed through the company's own Android platform. I own games end to end, from prototype to release, working closely with artists on gameplay, shaders and UI.</p>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Honey Road" muted loop playsinline preload="none" data-src="HoneyRoad.mp4" width="852" height="480" poster="posters/HoneyRoad.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Honey Road</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>An infinite 3D runner featuring a vertex-based shader that curves the entire screen for an immersive sense of depth, along with distance-based shading for a realistic sunset atmosphere. Vehicle steering uses Ackermann steering geometry for realistic handling. Uses a custom lighting model to reduce shader overhead, dithering-based transparency, extensive object pooling, and self-developed animations.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of World Traveler" muted loop playsinline preload="none" data-src="placeholder.mp4" width="852" height="480" poster="posters/placeholder.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>World Traveler</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A city car driving game featuring extensive LOD optimization and custom LOD solutions, a highly configurable vehicle controller, a custom lighting model to reduce shader overhead, dithering-based transparency, extensive object pooling to minimize runtime allocations and instantiation overhead, and a custom camera rig with a handmade speculative collision detection system.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Turtle Quest" muted loop playsinline preload="none" data-src="TurtleQuest.mp4" width="852" height="480" poster="posters/TurtleQuest.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Turtle Quest</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A 2D infinite runner featuring a parallax background, a custom vertex-based shader for 2D water waves, object pooling to reduce runtime instantiation overhead, and configurable gameplay settings.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Gear Up" muted loop playsinline preload="none" data-src="GearUp.mp4" width="852" height="480" poster="posters/GearUp.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Gear Up</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A vertical mobile jumping game featuring object pooling, custom animations driven by Bézier curves, a UI height meter synchronized with gameplay progression, and configurable gameplay settings.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Fluffy Rush" muted loop playsinline preload="none" data-src="FluffyRush.mp4" width="852" height="480" poster="posters/FluffyRush.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Fluffy Rush</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A dinosaur-style infinite runner inspired by the offline Chrome Dino game, featuring configurable gameplay parameters, Unity Animator-driven animations, and custom physics for jumping and hit reactions.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Space Scout" muted loop playsinline preload="none" data-src="SpaceScout.mp4" width="852" height="480" poster="posters/SpaceScout.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Space Scout</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A 2D space-themed infinite runner focused on dodging asteroids and planets, featuring object pooling for efficient runtime performance and gameplay modifiers that add variety to each run.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+        </div>
+        <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Pick It Up" muted loop playsinline preload="none" data-src="PickItUp.mp4" width="852" height="480" poster="posters/PickItUp.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Pick It Up</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>An exercise-style game focused on placing objects on shelves, built around a ScriptableObject-driven architecture for easy addition and configuration of new themes, styles, and content.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Fairy" muted loop playsinline preload="none" data-src="Fairy.mp4" width="852" height="480" poster="posters/Fairy.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Fairy</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A balancing game where the player must stay centered on screen, featuring various particle effects, a UI progress meter, and a unified mathematical model governing gameplay mechanics.</p>
+          <a href="https://theneuroblast.com">Link to Neuroblast website</a>
+        </div>
+        </div>
+    </div>
+    <div class="tab-panel" id="panel-code-havoc" data-panel="code-havoc" hidden>
+      <div class="tab-intro">
+        <p><b>Code Havoc · Unity Developer · 2022 – 2025</b><br>
+        Outsourced mobile games for external clients, shipped to Android with 200,000+ combined downloads. I built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Titles are under NDA, so the names below are descriptive.</p>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Golf</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile golf game for Android built on Unity's PhysX physics, with ball flight, bounces and rolling driven by tuned rigidbody physics. Features a simple camera rig that follows the ball automatically and hands control to the player at key moments, letting them pan and move around the course to line up shots, plus touch-based aiming and shot power controls.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Golf">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Match 3</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile match-3 puzzle game featuring swap-based matching, chain-reaction cascades and smooth timed board animations. Levels are semi-procedural: each level's special blocks are hand-placed and stay the same on every play, while the standard pieces are generated fresh each time, so levels keep their designed challenge but never play out identically. Includes configurable levels and gameplay settings.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Match%203">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Brick Breaker</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile brick breaker featuring custom ball physics with angle-based paddle control, grid-based levels stored as data so new layouts can be added without code changes, and configurable gameplay settings.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Brick%20Breaker">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Runner</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile level-based runner with an unlimited number of levels. Each level is a finite run with a clear finish line, semi-randomly generated from designed segments, so every new level feels fresh while staying fair. Features heavy ad integration, with rewarded ads for revives and bonuses, interstitials between runs and banner placements, all built into the gameplay loop without breaking its flow.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Runner">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Car Puzzle</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile sliding-block puzzle game with cars, where players slide vehicles along their lanes on a grid to clear a path for the target car to escape. Features grid-based movement with collision checks between vehicles, touch drag controls that snap cars into place, a range of puzzle levels, and configurable gameplay settings.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Car%20Puzzle">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block reversed">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Block Puzzle</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile block puzzle game in the style of Block Blast, where players drag sets of shaped pieces onto a grid and clear full rows and columns. Features grid-based placement validation, combo and streak scoring, game-over detection when no remaining piece can fit, and configurable gameplay settings.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Block%20Puzzle">Ask me about this project</a>
+        </div>
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <!-- <video autoplay muted loop playsinline preload="auto" width="852" height="480" poster="posters/placeholder.webp"> -->
+            <source src="placeholder.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="content">
+          <h2><b>Backgammon</b></h2>
+          <div class="techCategory">Unity Mobile</div>
+          <p>A mobile version of the classic board game Backgammon, featuring a full rules engine for legal move generation, hitting, bearing off and doubles, animated dice rolls and checker movement, touch controls with move highlighting, and configurable gameplay settings.</p>
+          <a href="mailto:stefandokman@hotmail.com?subject=About%20Backgammon">Ask me about this project</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="panel-online-games" data-panel="online-games" hidden>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Flip 7" muted loop playsinline preload="none" data-src="Flip7.mp4" width="852" height="480" poster="posters/Flip7.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Flip 7</b></h2>
+          <div class="techCategory">TypeScript · PixiJS · Cloudflare Workers</div>
+          <p>A multiplayer web version of the Flip 7 card game, built in TypeScript with a PixiJS client and a server-authoritative backend on Cloudflare Workers. Each room is its own Durable Object that owns the deck and the full rules engine, so clients only send intents (hit, stay, flip, give a card) and never see the draw order. State is saved after every action and idle rooms hibernate through the WebSocket Hibernation API, so a game survives refreshes and lost connections without using any server time while nobody is playing. Turn timers and a silent removal countdown for players who drop out run on server alarms, which keeps the table moving. The rules are covered by unit tests and 400 fuzzed full games that check no card is ever lost or duplicated.</p>
+          <a href="https://flip7.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
+        </div>
+      </div>
+
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Hold'em" muted loop playsinline preload="none" data-src="Holdem.mp4" width="852" height="480" poster="posters/Holdem.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Hold'em</b></h2>
+          <div class="techCategory">JavaScript · PixiJS · Cloudflare Workers</div>
+          <p>Online Texas Hold'em for up to 10 players, with a PixiJS client and a server-authoritative backend on Cloudflare Workers. Each table is a Durable Object that runs the full rules engine (raises, side pots, all-in runouts, split pots) and sends each player a view with only their own hole cards. The host sets starting chips, the starting blinds and the level where the blinds stop doubling. Turn timers run on server alarms: a player who disconnects is checked or folded automatically, and is removed if they're still gone when they have to act in the next hand. The rules are covered by unit tests and 500 random full games that check no chips are ever created or lost.</p>
+          <a href="https://holdem.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
+        </div>
+
+      </div>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Blackjack" muted loop playsinline preload="none" data-src="Blackjack.mp4" width="852" height="480" poster="posters/Blackjack.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Blackjack</b></h2>
+          <div class="techCategory">JavaScript · PixiJS · Cloudflare Workers</div>
+          <p>Online multiplayer blackjack for up to 7 players against the dealer, with a PixiJS client and a server-authoritative backend on Cloudflare Workers. Each table is a Durable Object that runs the full rules engine: a 6-deck shoe with a cut card, a dealer who peeks for blackjack and stands on all 17s, 3:2 naturals, doubling, and splitting up to four hands, with one card each on split aces. Players join by invite link, and anyone joining a full table watches until a seat opens. Each hand has a turn timer that stands automatically when it runs out. A player who disconnects keeps their seat for the rest of the round and is removed if they haven't come back by the next one. The host can fill empty seats with bots that play basic strategy. The rules are covered by unit tests and 500 random full rounds at a table of seven bots.</p>
+          <a href="https://blackjack.stefandokman.com" target="_blank" rel="noopener noreferrer">Play it online</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="panel-personal-projects" data-panel="personal-projects" hidden>
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of First Person Shooter" muted loop playsinline preload="none" data-src="fps.mp4" width="852" height="480" poster="posters/fps.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>First Person Shooter</b></h2>
+          <div class="techCategory">Unity</div>
+            <p>A first-person shooter built on a custom kinematic movement controller instead of Rigidbody physics, giving frame-consistent acceleration and air control. Weapons and enemies are fully data-driven through ScriptableObjects: fire mode (full-auto or semi-auto), fire rate and a procedural recoil curve are defined per weapon asset, and enemy stats and collision behaviour per enemy asset, so new variants are added without touching code.</p>
+               <a href="mailto:stefandokman@hotmail.com?subject=About%20First%20Person%20Shooter">Ask me about this project</a>
+
+        </div>
+      </div>
+
+
+         <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Match 3" muted loop playsinline preload="none" data-src="CandyCrush.mp4" width="852" height="480" poster="posters/CandyCrush.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Match 3</b></h2>
+          <div class="techCategory">Unity</div>
+          <p>A match-3 game where the board's logical state is kept separate from its presentation. Each move resolves as a sequence of phases (swap, match detection, clear, gravity, refill, cascade check), and a timer-driven sequencer gates input until the animations finish, so the visuals can't drift out of sync with the board. Cascades are handled by re-running match detection after every refill until the board is stable. A from-scratch personal rebuild of a game I developed at Code Havoc, made so the code can be shown outside the NDA.</p>
+               <a href="mailto:stefandokman@hotmail.com?subject=About%20Match%203">Ask me about this project</a>
+
+        </div>
+      </div>
+
+         <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Endless Runner" muted loop playsinline preload="none" data-src="infRunner.mp4" width="852" height="480" poster="posters/infRunner.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Endless Runner</b></h2>
+          <div class="techCategory">Unity</div>
+          <p>An endless runner with deterministic, position-based gameplay and no physics engine. It features a custom toon shader with screen-wide vertex distortion that curves the entire world, so all gameplay stays in straight lines while the curvature is purely visual. The same shader handles stylised lighting and outlines in a single pass to keep GPU overhead low. Track segments and obstacles are fully object-pooled to avoid runtime allocations and instantiation spikes, spawned by a sliding-window algorithm, with character states driven by Unity's Animator.</p>
+               <a href="mailto:stefandokman@hotmail.com?subject=About%20Endless%20Runner">Ask me about this project</a>
+
+        </div>
+      </div>
+
+
+      <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Platformer 3D" muted loop playsinline preload="none" data-src="Platformer.mp4" width="852" height="480" poster="posters/Platformer.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Platformer 3D</b></h2>
+          <div class="techCategory">Unity</div>
+          <p>A 3D platformer with a hybrid approach to physics: custom movement and jump integration for tight, tunable control, while Unity's collision detection resolves contacts with terrain and hazards. Moving platforms carry the player by passing on their velocity. Static level geometry uses baked lightmaps, with light probes lighting the player and moving elements, which keeps real-time lighting cost low.</p>
+              <a href="mailto:stefandokman@hotmail.com?subject=About%20Platformer%203D">Ask me about this project</a>
+
+        </div>
+      </div>
+
+
+
+
+          <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Twin Stick Shooter" muted loop playsinline preload="none" data-src="Tank.mp4" width="852" height="480" poster="posters/Tank.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Twin Stick Shooter</b></h2>
+          <div class="techCategory">Unity</div>
+          <p>A 2D tank shooter with tank-style controls (rotate in place, drive forward or back) and a time-slow ability driven by a custom time system built on unscaled delta time, instead of changing the global Time.timeScale. Enemies spawn on a ring just outside the camera's bounds, computed from the viewport, so they never appear on screen. Both enemies and projectiles are object-pooled to avoid runtime allocations.</p>
+              <a href="mailto:stefandokman@hotmail.com?subject=About%20Twin%20Stick%20Shooter">Ask me about this project</a>
+        </div>
+      </div>
+
+         <div class="block reversed">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Brick Breaker" muted loop playsinline preload="none" data-src="BrickBreaker.mp4" width="852" height="480" poster="posters/BrickBreaker.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Brick Breaker</b></h2>
+          <div class="techCategory">Unity</div>
+         <p>A brick breaker that skips the physics engine and handles ball movement, collision and reflection with my own vector and trigonometry math. The ball's bounce angle off the paddle depends on where it hits, which gives the player aim control. Owning the collision step makes the game's behaviour deterministic and fully tunable. A from-scratch personal rebuild of a game I developed at Code Havoc, made so the code can be shown outside the NDA.</p>
+              <a href="mailto:stefandokman@hotmail.com?subject=About%20Brick%20Breaker">Ask me about this project</a>
+        </div>
+      </div>
+
+      <!-- Platformer 2D hidden for now
+         <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Platformer 2D" muted loop playsinline preload="none" data-src="Frog.mp4" width="852" height="480" poster="posters/Frog.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Platformer 2D</b></h2>
+          <div class="techCategory">Unity</div>
+         <p>I developed a 2D platformer in Unity using its Physics2D system to create realistic movement and interactions. The game features moving platforms and falling block traps. It includes a variety of enemies, some that run, others that fly, and some that shoot, adding diversity to the gameplay.</p>
+              <a href="mailto:stefandokman@hotmail.com?subject=About%20Platformer%202D">Ask me about this project</a>
+        </div>
+      </div>
+      -->
+
+         <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Gameplay video of Texture Erosion Shader" muted loop playsinline preload="none" data-src="Card.mp4" width="852" height="480" poster="posters/Card.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Texture Erosion Shader</b></h2>
+          <div class="techCategory">HLSL</div>
+         <p>A dissolve/erosion shader written in HLSL for dissolving cards and VFX. A noise mask combined with a UV-space direction bias decides the order in which pixels erode, a single reveal parameter drives the effect from 0 to 1 so it can be animated from code or a Timeline, and a feather parameter controls the width of the two-colour burn edge. It's one texture sample and a few ALU ops, so it's cheap enough to run on many objects at once.</p>
+              <a href="mailto:stefandokman@hotmail.com?subject=About%20Texture%20Erosion%20Shader">Ask me about this project</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <script>
     (function () {
-      var container = document.getElementById('projects');
       var tabs = document.querySelectorAll('.page-tabs a');
-      var pages = { 'personal-projects': 'personal-projects.html', 'neuroblast': 'neuroblast.html', 'code-havoc': 'code-havoc.html', 'online-games': 'online-games.html' };
-      var panels = {};
+      var panels = document.querySelectorAll('#projects .tab-panel');
       var current = null;
       // videos load and play only when near the screen, and pause when scrolled away;
       // videos in hidden tabs never intersect, so they don't download until their tab is opened
@@ -98,40 +432,23 @@ If you have any questions about my projects or just want to connect, feel free t
           }
         });
       }, { rootMargin: '300px 0px' });
-
-      // All tabs are loaded up front into hidden panels, so crawlers that render the page
-      // (like Google) see every section, not just the one that is open.
-      Object.keys(pages).forEach(function (name) {
-        var panel = document.createElement('div');
-        panel.className = 'tab-panel';
-        panel.hidden = true;
-        container.appendChild(panel);
-        panels[name] = panel;
-        fetch(pages[name]).then(function (r) {
-          if (!r.ok) throw new Error(r.status);
-          return r.text();
-        }).then(function (text) {
-          panel.innerHTML = text;
-          panel.querySelectorAll('video[data-src]').forEach(function (v) {
-            v.muted = true;
-            io.observe(v);
-          });
-        }).catch(function () {
-          panel.innerHTML = '<p>Could not load projects. Please refresh the page.</p>';
-        });
+      document.querySelectorAll('#projects video[data-src]').forEach(function (v) {
+        v.muted = true;
+        io.observe(v);
       });
 
+      // All tab content is in the HTML (so crawlers that don't run JavaScript see it);
+      // tabs only switch which panel is visible.
       function show(name) {
-        if (!pages[name]) name = 'neuroblast';
+        if (!document.querySelector('[data-panel="' + name + '"]')) name = 'neuroblast';
         if (name === current) return;
         current = name;
-
         tabs.forEach(function (t) {
           if (t.dataset.page === name) t.setAttribute('aria-current', 'page');
           else t.removeAttribute('aria-current');
         });
-        Object.keys(panels).forEach(function (n) {
-          panels[n].hidden = n !== name;
+        panels.forEach(function (p) {
+          p.hidden = p.dataset.panel !== name;
         });
       }
 

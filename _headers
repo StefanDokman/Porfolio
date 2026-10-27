@@ -5,18 +5,6 @@
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-# Tab fragments are loaded into index.html by JS; keep them out of search results.
-# Cloudflare serves pages without the .html extension (/neuroblast.html -> /neuroblast),
-# so the rules must match the extensionless paths.
-/code-havoc
-  X-Robots-Tag: noindex
-/neuroblast
-  X-Robots-Tag: noindex
-/online-games
-  X-Robots-Tag: noindex
-/personal-projects
-  X-Robots-Tag: noindex
-
 # The site is deployed as a Worker, so its *.workers.dev address (and preview URLs)
 # duplicates the site; keep it out of search.
 https://:worker.:account.workers.dev/*
