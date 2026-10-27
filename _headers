@@ -17,10 +17,6 @@
 /personal-projects
   X-Robots-Tag: noindex
 
-# Placeholder page, not linked from the site yet. Remove this once it has real content.
-/projects
-  X-Robots-Tag: noindex
-
 # The site is deployed as a Worker, so its *.workers.dev address (and preview URLs)
 # duplicates the site; keep it out of search.
 https://:worker.:account.workers.dev/*

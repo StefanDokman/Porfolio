@@ -51,5 +51,4 @@ Each game is server-authoritative: every room or table is a Durable Object runni
 - Platformer 3D: custom movement with Unity collision, moving platforms, baked lightmaps and light probes.
 - Twin Stick Shooter: tank controls and a time-slow ability built on unscaled delta time, with off-screen ring spawning.
 - Brick Breaker: physics-free ball movement and reflection using his own vector math (rebuilt from scratch outside the NDA).
-- Platformer 2D: his first game, built with Physics2D, moving platforms and several enemy types.
 - Texture Erosion Shader: HLSL dissolve shader with a noise mask, direction bias and a two-colour burn edge in one texture sample.
