@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Must match the Worker's name in the Cloudflare dashboard (Workers & Pages),
+  // otherwise Workers Builds refuses to deploy.
+  "name": "porfolio",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-11-01",
+
+  // Turns knowledge/*.md into src/knowledge.generated.ts before every deploy and dev run.
+  "build": {
+    "command": "node scripts/build-knowledge.mjs",
+    "watch_dir": ["knowledge", "scripts"]
+  },
+
+  // The site is still served from the repo root; .assetsignore keeps everything
+  // that isn't part of the site (source, knowledge, node_modules...) off the web.
+  // Only /api/* reaches the Worker code; every other request is a plain static file.
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // One global Durable Object that enforces the spend budget and per-visitor rate limits.
+  "durable_objects": {
+    "bindings": [{ "name": "CHAT_GUARD", "class_name": "ChatGuard" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ChatGuard"] }],
+
+  "vars": {
+    // "false" hides the chat button and disables /api/chat (kill switch).
+    "CHAT_ENABLED": "true",
+    "CHAT_MODEL": "claude-haiku-5-5",
+    // Estimated from token usage; also set a matching spend limit in the Anthropic Console.
+    "MONTHLY_BUDGET_USD": "5",
+    "DAILY_BUDGET_USD": "0.16",
+    // Messages per visitor (IP address).
+    "IP_PER_MINUTE": "6",
+    "IP_PER_DAY": "40"
+  },
+  // ANTHROPIC_API_KEY is a secret: `npx wrangler secret put ANTHROPIC_API_KEY`
+  // (or Cloudflare dashboard -> the Worker -> Settings -> Variables and Secrets).
+
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "porfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "knowledge": "node scripts/build-knowledge.mjs",
+    "dev": "wrangler dev",
+    "dev:mock": "node scripts/dev-mock.mjs",
+    "check": "node scripts/build-knowledge.mjs && tsc --noEmit",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261117.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.164.0"
+  }
+}
