@@ -25,9 +25,9 @@ Change settings in `wrangler.jsonc`, not in the dashboard. A deploy replaces any
 | Variable | Default | What it does |
 |---|---|---|
 | `CHAT_ENABLED` | `"true"` | `"false"` hides the button and turns off `/api/chat` |
-| `CHAT_MODEL` | `"claude-opus-5-5"` | Model used for answers. `"claude-haiku-5-5"` costs about 40x less; `"claude-sonnet-5-5"` about half |
+| `CHAT_MODEL` | `"claude-haiku-5-5"` | Model used for answers. `"claude-sonnet-5-5"` or `"claude-opus-5-5"` write better answers at 20x or 40x the cost |
 | `MONTHLY_BUDGET_USD` | `"5"` | The chat stops for the rest of the month (UTC) once its estimated spend reaches this |
-| `DAILY_BUDGET_USD` | `"0.5"` | Same per UTC day, so one busy day (or one abuser) can't use up the month |
+| `DAILY_BUDGET_USD` | `"0.16"` | Same per UTC day. At 5/31 the monthly limit can never be reached, so heavy use or abuse turns the chat off for the rest of that day at most |
 | `IP_PER_MINUTE` | `"6"` | Messages per visitor per minute |
 | `IP_PER_DAY` | `"40"` | Messages per visitor per day |
 
@@ -39,9 +39,9 @@ The knowledge is currently about 5,000 tokens. Rough cost per visitor conversati
 
 | Model | Per conversation | Conversations for $5 |
 |---|---|---|
-| `claude-opus-5-5` | ~$0.08 | ~60 |
+| `claude-haiku-5-5` (current) | ~$0.002 | ~2,500 (about 80 a day under the daily cap) |
 | `claude-sonnet-5-5` | ~$0.04 | ~120 |
-| `claude-haiku-5-5` | ~$0.002 | ~2,500 |
+| `claude-opus-5-5` | ~$0.08 | ~60 |
 
 The first question in a visit costs the most, because it writes the knowledge into the 5-minute prompt cache; follow-ups read it at a twentieth of the price. More knowledge raises the cost of every message, so `npm run knowledge` prints the current token count.
 
