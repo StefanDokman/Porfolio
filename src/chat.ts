@@ -3,7 +3,7 @@ import { chatEnabled, limitsFrom, type Env } from "./env";
 import { KNOWLEDGE } from "./knowledge.generated";
 import { SYSTEM_PROMPT } from "./prompt";
 
-const DEFAULT_MODEL = "claude-opus-5-5";
+const DEFAULT_MODEL = "claude-haiku-5-5";
 // Hard cap on thinking + answer per reply. Answers are asked to be short, so this
 // only matters as a cost ceiling; a cut-off answer ends with "…".
 const MAX_TOKENS = 2048;

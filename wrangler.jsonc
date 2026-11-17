@@ -30,10 +30,10 @@
   "vars": {
     // "false" hides the chat button and disables /api/chat (kill switch).
     "CHAT_ENABLED": "true",
-    "CHAT_MODEL": "claude-opus-5-5",
+    "CHAT_MODEL": "claude-haiku-5-5",
     // Estimated from token usage; also set a matching spend limit in the Anthropic Console.
     "MONTHLY_BUDGET_USD": "5",
-    "DAILY_BUDGET_USD": "0.5",
+    "DAILY_BUDGET_USD": "0.16",
     // Messages per visitor (IP address).
     "IP_PER_MINUTE": "6",
     "IP_PER_DAY": "40"

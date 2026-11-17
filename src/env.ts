@@ -32,7 +32,7 @@ function num(value: string | undefined, fallback: number): number {
 export function limitsFrom(env: Env): Limits {
   return {
     monthlyUsd: num(env.MONTHLY_BUDGET_USD, 5),
-    dailyUsd: num(env.DAILY_BUDGET_USD, 0.5),
+    dailyUsd: num(env.DAILY_BUDGET_USD, 0.16),
     ipPerMinute: num(env.IP_PER_MINUTE, 6),
     ipPerDay: num(env.IP_PER_DAY, 40),
   };
