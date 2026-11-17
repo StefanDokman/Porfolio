@@ -37,11 +37,12 @@ Outsourced mobile games for external clients, shipped to Android with 200,000+ c
 
 ## Web Games (multiplayer, PixiJS + Cloudflare Workers)
 
-Each game is server-authoritative: every room or table is a Durable Object running the full rules engine, with turn timers on server alarms and fuzz-tested rules.
+Each card game is server-authoritative: every room or table is a Durable Object running the full rules engine, with turn timers on server alarms and fuzz-tested rules.
 
 - [Flip 7](https://flip7.stefandokman.com): TypeScript card game; clients only send intents and never see the draw order; rooms hibernate via the WebSocket Hibernation API.
 - [Hold'em](https://holdem.stefandokman.com): Texas Hold'em for up to 10 players with side pots, all-in runouts and split pots; each player only receives their own hole cards.
 - [Blackjack](https://blackjack.stefandokman.com): up to 7 players vs. the dealer, 6-deck shoe, splitting up to four hands, invite links and basic-strategy bots.
+- [Forest Feast](https://slots.stefandokman.com/): single-player 5x3 slot played with play money only, with wilds, free spins with doubled wins, and a Hold & Spin feature with four jackpots.
 
 ## Earlier Projects (Unity, HLSL)
 
