@@ -119,7 +119,20 @@ On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc)
 
 At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX.
 
-The titles are under NDA. The portfolio therefore uses descriptive names instead of the real game titles, shows no gameplay videos for these games, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All seven games below are Unity mobile games.
+The titles are under NDA. The portfolio therefore uses descriptive names instead of the real game titles, shows a gameplay video only for Backgammon, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All seven games below are Unity mobile games.
+
+The Code Havoc tab also lists one web project, Zero Tenacity, which is not under NDA and is shown first on the tab.
+
+### Zero Tenacity (Code Havoc, website)
+
+- Website: https://www.zerotenacity.com/
+- Tech: WordPress, PHP.
+
+A client website built on WordPress, which Stefan maintained for six months.
+
+- Wrote custom WordPress plugins in PHP for features the site needed.
+- Implemented the site's e-commerce page.
+- Integrated several external APIs into the site.
 
 ### Golf (Code Havoc, descriptive name)
 
