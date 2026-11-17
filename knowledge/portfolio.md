@@ -184,7 +184,7 @@ A mobile version of the classic board game Backgammon.
 
 On the site: the Web Games tab (https://portfolio.stefandokman.com/#online-games).
 
-Three multiplayer card games and a single-player slot game, all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games.
+Three multiplayer card games and a single-player slot game, all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games. The slot game runs on the same stack: every spin is resolved on the server, and each player's play-money balance is its own Durable Object.
 
 ### Flip 7 (web game)
 
@@ -227,14 +227,17 @@ Online multiplayer blackjack for up to 7 players against the dealer.
 ### Forest Feast (web game)
 
 - Play it: https://slots.stefandokman.com/
-- Single-player slot game, played with play money only: no real money and no purchases.
+- Tech: TypeScript, PixiJS, Cloudflare Workers.
 
-A 5x3 video slot with a picnic theme.
+A single-player 5x3 cascading video slot with a picnic theme, played with play money only: no real money and no purchases.
 
-- Winning paylines are drawn across the reels, and wild chilis substitute for other symbols.
-- Landing bonus cauldrons starts a round of free spins where every win is doubled.
-- Landing enough cookies starts the Hold & Spin feature: the cookies lock in place over a short series of respins, then each one pays its value, and some cookies award the Mini, Minor, Major or Grand jackpot instead.
-- Large payouts finish with a Big Win celebration that counts the amount up on screen.
+- The math engine is a TypeScript port of an open-source Python slot simulator (walidelkersh/slot-simulation-engine). It runs inside a Cloudflare Worker, so every round is resolved on the server with a cryptographically secure RNG.
+- Each player's play-money balance is its own Durable Object (SQLite storage), keyed by an anonymous cookie. Players start with 1,000 free credits and can refill for free.
+- The server returns the whole round as data (the initial grid, every cascade step, every free spin and Hold & Spin respin), and the PixiJS client only animates it, so the client cannot change an outcome.
+- 20 paylines with cascades: winning symbols burst and new ones tumble in, up to 15 times per spin. Wild chilis substitute for the paying symbols.
+- Three or more bonus cauldrons anywhere award 10 free spins with every win doubled, and three more during free spins add another 10.
+- Six or more cookies start Hold & Spin: cookies stick, the 3 respins reset on every new cookie, cookies carry cash values or the Mini, Minor or Major jackpot, and filling all 15 cells pays the Grand.
+- Testing: unit tests ported from the original Python suite plus checks on every cascade step, and a Monte Carlo run of 10 million spins puts the return to player at about 96%.
 
 ## Earlier Projects (Unity, HLSL)
 <!-- link: #personal-projects -->
