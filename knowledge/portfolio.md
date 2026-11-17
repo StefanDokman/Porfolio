@@ -184,7 +184,7 @@ A mobile version of the classic board game Backgammon.
 
 On the site: the Web Games tab (https://portfolio.stefandokman.com/#online-games).
 
-Three multiplayer card games that anyone can play in a browser. All three share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games.
+Three multiplayer card games and a single-player slot game, all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games.
 
 ### Flip 7 (web game)
 
@@ -223,6 +223,18 @@ Online multiplayer blackjack for up to 7 players against the dealer.
 - A player who disconnects keeps their seat for the rest of the round and is removed if not back by the next one.
 - The host can fill empty seats with bots that play basic strategy.
 - Testing: unit tests plus 500 random full rounds at a table of seven bots.
+
+### Forest Feast (web game)
+
+- Play it: https://slots.stefandokman.com/
+- Single-player slot game, played with play money only: no real money and no purchases.
+
+A 5x3 video slot with a picnic theme.
+
+- Winning paylines are drawn across the reels, and wild chilis substitute for other symbols.
+- Landing bonus cauldrons starts a round of free spins where every win is doubled.
+- Landing enough cookies starts the Hold & Spin feature: the cookies lock in place over a short series of respins, then each one pays its value, and some cookies award the Mini, Minor, Major or Grand jackpot instead.
+- Large payouts finish with a Big Win celebration that counts the amount up on screen.
 
 ## Earlier Projects (Unity, HLSL)
 <!-- link: #personal-projects -->
