@@ -1,6 +1,5 @@
 ---
 title: Stefan Dokman – Portfolio
-link: "/"
 ---
 
 # Stefan Dokman – Game Developer portfolio
@@ -35,6 +34,7 @@ The About section of the site, restated:
 - Stefan welcomes questions about the projects, or people who just want to connect, by email or LinkedIn.
 
 ## Neuroblast · Unity Developer · August 2025 – present
+<!-- link: #neuroblast -->
 
 On the site: the Neuroblast tab (https://portfolio.stefandokman.com/#neuroblast). Company website: https://theneuroblast.com
 
@@ -113,6 +113,7 @@ A balancing game where the player must stay centered on screen.
 - A unified mathematical model that governs the gameplay mechanics.
 
 ## Code Havoc · Unity Developer · 2022 – 2025
+<!-- link: #code-havoc -->
 
 On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc).
 
@@ -179,6 +180,7 @@ A mobile version of the classic board game Backgammon.
 - Configurable gameplay settings.
 
 ## Web Games (multiplayer, PixiJS + Cloudflare Workers)
+<!-- link: #online-games -->
 
 On the site: the Web Games tab (https://portfolio.stefandokman.com/#online-games).
 
@@ -223,6 +225,7 @@ Online multiplayer blackjack for up to 7 players against the dealer.
 - Testing: unit tests plus 500 random full rounds at a table of seven bots.
 
 ## Earlier Projects (Unity, HLSL)
+<!-- link: #personal-projects -->
 
 On the site: the Earlier Projects tab (https://portfolio.stefandokman.com/#personal-projects).
 

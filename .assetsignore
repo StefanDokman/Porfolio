@@ -1,5 +1,17 @@
 # Cloudflare uploads the repo root as the site; keep repo internals off the web.
+# Anything added at the repo root that isn't part of the site belongs here.
 .git
 .github
 .assetsignore
+.gitignore
+.wrangler
+.dev.vars*
+node_modules
+package.json
+package-lock.json
+tsconfig.json
+wrangler.jsonc
+src
+scripts
+docs
 knowledge
