@@ -117,7 +117,7 @@ A balancing game where the player must stay centered on screen.
 
 On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc).
 
-At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX.
+At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also built features for and maintained Zero Tenacity, a client website in WordPress and PHP.
 
 The titles are under NDA. The portfolio therefore uses descriptive names instead of the real game titles, shows a gameplay video only for Backgammon, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All seven games below are Unity mobile games.
 
@@ -128,11 +128,12 @@ The Code Havoc tab also lists one web project, Zero Tenacity, which is not under
 - Website: https://www.zerotenacity.com/
 - Tech: WordPress, PHP.
 
-A client website built on WordPress, which Stefan maintained for six months.
+A website for an external client, built on WordPress, which Stefan maintained for six months.
 
-- Wrote custom WordPress plugins in PHP for features the site needed.
-- Implemented the site's e-commerce page.
-- Integrated several external APIs into the site.
+- Where existing plugins didn't cover what the client needed, Stefan wrote custom WordPress plugins in PHP, so new features live in their own plugins rather than in the theme and keep working through theme changes and updates.
+- Implemented the site's e-commerce page, where visitors browse and buy products.
+- Connected the site to several external APIs so it could exchange data with outside services.
+- Ongoing maintenance covered fixing issues as they came up, keeping WordPress and its plugins up to date, and making the content and feature changes the client asked for.
 
 ### Golf (Code Havoc, descriptive name)
 
