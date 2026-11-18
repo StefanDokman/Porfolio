@@ -91,7 +91,7 @@ function buildMessages(turns: Turn[]): Anthropic.Beta.Messages.BetaMessageParam[
 }
 
 async function visitorKey(ip: string): Promise<string> {
-  // Salted with the day: the key can't be reversed into an IP and changes daily.
+  // Salted with the UTC date, so the key changes daily; only the hash is stored, never the IP.
   const day = new Date().toISOString().slice(0, 10);
   const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`portfolio-chat:${day}:${ip}`));
   return [...new Uint8Array(digest).slice(0, 12)].map((b) => b.toString(16).padStart(2, "0")).join("");
