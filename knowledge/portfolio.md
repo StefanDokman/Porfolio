@@ -121,7 +121,7 @@ At Code Havoc, Stefan worked on outsourced mobile games for external clients. Th
 
 Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so Stefan can show the code, since the originals aren't public (see Earlier Projects). All eight games below are Unity mobile games.
 
-The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, first on the tab.
+The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, last on the tab.
 
 ### Zero Tenacity (Code Havoc, website)
 
