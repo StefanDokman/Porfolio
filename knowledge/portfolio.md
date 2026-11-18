@@ -4,7 +4,7 @@ title: Stefan Dokman – Portfolio
 
 # Stefan Dokman – Game Developer portfolio
 
-Source: https://portfolio.stefandokman.com. This file restates everything shown on the portfolio site as plain text. The site has four tabs: Neuroblast, Code Havoc, Web Games and Earlier Projects.
+Source: https://portfolio.stefandokman.com. This file restates everything shown on the portfolio site as plain text. The site has four tabs: Neuroblast, Code Havoc, Web Projects and Earlier Projects.
 
 ## Summary
 
@@ -208,14 +208,14 @@ A mobile marble shooter where a chain of colored marbles rolls along a spiral tr
 - A dotted aim line with a preview of the next marble.
 - Combo scoring.
 
-## Web Games (multiplayer, PixiJS + Cloudflare Workers)
+## Web Projects (PixiJS, Cloudflare Workers, Claude API)
 <!-- link: #online-games -->
 
-On the site: the Web Games tab (https://portfolio.stefandokman.com/#online-games).
+On the site: the Web Projects tab (https://portfolio.stefandokman.com/#online-games).
 
-Three multiplayer card games and a single-player slot game, all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games. The slot game runs on the same stack: every spin is resolved on the server, and each player's play-money balance is its own Durable Object.
+The portfolio's AI chat, three multiplayer card games and a single-player slot game; the games are all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games. The slot game runs on the same stack: every spin is resolved on the server, and each player's play-money balance is its own Durable Object.
 
-The tab ends with the Portfolio AI Chat entry, which describes the "Ask AI about my work" assistant on the site (TypeScript, Cloudflare Workers, Claude API) and links to its code at https://github.com/StefanDokman/Porfolio. How the chat works is covered in detail in the notes about the portfolio's AI chat.
+The tab starts with the Portfolio AI Chat entry, which describes the "Ask AI about my work" assistant on the site (TypeScript, Cloudflare Workers, Claude API) and links to its code at https://github.com/StefanDokman/Porfolio. How the chat works is covered in detail in the notes about the portfolio's AI chat.
 
 ### Flip 7 (web game)
 
@@ -342,6 +342,6 @@ An index for questions like "has Stefan worked with X?". Each item names the pro
 - Architecture and data-driven design: ScriptableObject-driven content (Pick It Up, First Person Shooter); levels stored as data (Brick Breaker at Code Havoc); board logic separated from presentation with a phase-based sequencer (Match 3 rebuild); full rules engines (Backgammon, Flip 7, Hold'em, Blackjack); semi-procedural level generation (Match 3 and Runner at Code Havoc).
 - Animation, UI and effects: Bézier-curve animations and a UI height meter (Gear Up); Unity Animator (Fluffy Rush, Endless Runner); particle effects and a UI progress meter (Fairy); touch controls (Golf, Traffic Puzzle, Block Puzzle, Backgammon).
 - Monetization: rewarded, interstitial and banner ads built into the gameplay loop (Runner); ads, audio and VFX integration (Code Havoc).
-- Multiplayer and backend: server-authoritative multiplayer on Cloudflare Workers with Durable Objects, WebSockets and the WebSocket Hibernation API, server alarms for turn timers, hidden information so players see only their own cards, disconnect and reconnect handling, invite links, and basic-strategy bots (Web Games).
+- Multiplayer and backend: server-authoritative multiplayer on Cloudflare Workers with Durable Objects, WebSockets and the WebSocket Hibernation API, server alarms for turn timers, hidden information so players see only their own cards, disconnect and reconnect handling, invite links, and basic-strategy bots (the games on the Web Projects tab).
 - Testing: unit tests plus fuzzed or randomized full-game runs (Flip 7, Hold'em, Blackjack).
 - Languages and tools named on the site: Unity, HLSL, TypeScript, JavaScript, PixiJS, Cloudflare Workers.

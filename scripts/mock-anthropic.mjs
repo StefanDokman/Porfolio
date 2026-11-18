@@ -38,7 +38,7 @@ function summarize(body, headers) {
 function answerFor(question, docs) {
   const find = (word) => docs.findIndex((d) => (d.title || "").includes(word));
   const neuroblast = Math.max(find("Neuroblast"), 0);
-  const web = find("Web Games");
+  const web = find("Web Projects");
   const parts = [
     { text: "This is a mock answer from scripts/mock-anthropic.mjs, so no real AI was used. " },
     { text: `You asked: "${question.slice(0, 120)}". ` },
