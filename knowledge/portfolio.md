@@ -117,7 +117,7 @@ A balancing game where the player must stay centered on screen.
 
 On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc).
 
-At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also maintained and added features to Zero Tenacity, a client website built in WordPress and PHP.
+At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan owned games end to end, from prototype to release: he built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also maintained and added features to Zero Tenacity, a client website built in WordPress and PHP.
 
 Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so Stefan can show the code, since the originals aren't public (see Earlier Projects). All eight games below are Unity mobile games.
 
