@@ -45,7 +45,7 @@ function checkLink(link, file) {
   fail(`${file}: link "${link}" must be a page anchor like #neuroblast or an https:// URL`);
 }
 
-// "Neuroblast · Unity Developer · Aug 2025" -> "Neuroblast"; "Web Games (multiplayer)" -> "Web Games"
+// "Neuroblast · Unity Developer · Aug 2025" -> "Neuroblast"; "Web Projects (PixiJS)" -> "Web Projects"
 function shortLabel(heading) {
   return heading.split(/\s+·\s+|\s+\(/)[0].trim();
 }

@@ -72,7 +72,7 @@ If you have any questions about my projects or just want to connect, feel free t
   <nav class="page-tabs" aria-label="Pages">
     <a href="#neuroblast" data-page="neuroblast">Neuroblast</a>
     <a href="#code-havoc" data-page="code-havoc">Code Havoc</a>
-    <a href="#online-games" data-page="online-games">Web Games</a>
+    <a href="#online-games" data-page="online-games">Web Projects</a>
     <a href="#personal-projects" data-page="personal-projects">Earlier Projects</a>
   </nav>
   <main id="projects" class="container">
@@ -278,6 +278,18 @@ If you have any questions about my projects or just want to connect, feel free t
     <div class="tab-panel" id="panel-online-games" data-panel="online-games">
       <div class="block normal">
         <div class="video-container">
+          <img src="posters/AIChatDiagram.webp" alt="Architecture diagram of the portfolio AI chat: the browser sends a question to a Cloudflare Worker, which checks a Durable Object for budget and rate limits, sends the prompt with the bundled, cached Markdown knowledge base to Claude, and streams the answer with citations back to the browser." width="852" height="480" loading="lazy" decoding="async">
+        </div>
+        <div class="content">
+          <h2><b>Portfolio AI Chat</b></h2>
+          <div class="techCategory">TypeScript · Cloudflare Workers · Claude API</div>
+          <p>The "Ask AI about my work" assistant on this portfolio, which answers visitors' questions about my projects. It runs on a Cloudflare Worker in TypeScript and calls Claude through the Anthropic SDK. Instead of vector search, every request sends the whole knowledge base, a set of Markdown notes split into sections at build time, as cited documents, so there are no retrieval misses and each answer links its sources back to the matching tab. Prompt caching keeps that repeated prefix cheap. Answers stream to the browser as server-sent events, and stopping an answer also aborts the model call. A Durable Object guards the budget: it estimates each answer's cost from its token usage and pauses the chat at daily and monthly limits. Visitors are rate-limited by a daily-salted hash of their IP address, so raw addresses are never stored, and conversations stay in the visitor's browser tab rather than on the server.</p>
+          <a href="https://github.com/StefanDokman/Porfolio" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
+        </div>
+      </div>
+
+      <div class="block reversed">
+        <div class="video-container">
           <video aria-label="Gameplay video of Flip 7" muted loop playsinline preload="none" data-src="Flip7.mp4" width="852" height="480" poster="posters/Flip7.webp"></video>
         </div>
         <div class="content">
@@ -288,7 +300,7 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
       </div>
 
-      <div class="block reversed">
+      <div class="block normal">
         <div class="video-container">
           <video aria-label="Gameplay video of Hold'em" muted loop playsinline preload="none" data-src="Holdem.mp4" width="852" height="480" poster="posters/Holdem.webp"></video>
         </div>
@@ -300,7 +312,8 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
 
       </div>
-      <div class="block normal">
+
+      <div class="block reversed">
         <div class="video-container">
           <video aria-label="Gameplay video of Blackjack" muted loop playsinline preload="none" data-src="Blackjack.mp4" width="852" height="480" poster="posters/Blackjack.webp"></video>
         </div>
@@ -312,7 +325,7 @@ If you have any questions about my projects or just want to connect, feel free t
         </div>
       </div>
 
-      <div class="block reversed">
+      <div class="block normal">
         <div class="video-container">
           <video aria-label="Gameplay video of Forest Feast" muted loop playsinline preload="none" data-src="ForestFeast.mp4" width="852" height="480" poster="posters/ForestFeast.webp"></video>
         </div>
@@ -321,18 +334,6 @@ If you have any questions about my projects or just want to connect, feel free t
           <div class="techCategory">TypeScript · PixiJS · Cloudflare Workers</div>
           <p>A single-player 5x3 cascading slot, played with play money only: no real money and no purchases. The math engine is a TypeScript port of an open-source Python slot simulator, and it runs inside a Cloudflare Worker, so every round is resolved on the server with a cryptographically secure RNG. Each player's balance lives in its own Durable Object, and the server sends back the whole round as data (the initial grid, every cascade step, every free spin and respin), which the PixiJS client only animates. The game has 20 paylines and up to 15 cascades per spin, where winning symbols burst and new ones tumble in. Three bonus cauldrons award 10 free spins with every win doubled. Six cookies start Hold &amp; Spin, where cookies stick, the 3 respins reset on every new cookie, and filling all 15 cells pays the Grand jackpot. The engine is covered by unit tests ported from the original Python suite, and a Monte Carlo run of 10 million spins puts the return to player at about 96%.</p>
           <a href="https://slots.stefandokman.com/" target="_blank" rel="noopener noreferrer">Play it online</a>
-        </div>
-      </div>
-
-      <div class="block normal">
-        <div class="video-container">
-          <img src="posters/AIChatDiagram.webp" alt="Architecture diagram of the portfolio AI chat: the browser sends a question to a Cloudflare Worker, which checks a Durable Object for budget and rate limits, sends the prompt with the bundled, cached Markdown knowledge base to Claude, and streams the answer with citations back to the browser." width="852" height="480" loading="lazy" decoding="async">
-        </div>
-        <div class="content">
-          <h2><b>Portfolio AI Chat</b></h2>
-          <div class="techCategory">TypeScript · Cloudflare Workers · Claude API</div>
-          <p>The "Ask AI about my work" assistant on this portfolio, which answers visitors' questions about my projects. It runs on a Cloudflare Worker in TypeScript and calls Claude through the Anthropic SDK. Instead of vector search, every request sends the whole knowledge base, a set of Markdown notes split into sections at build time, as cited documents, so there are no retrieval misses and each answer links its sources back to the matching tab. Prompt caching keeps that repeated prefix cheap. Answers stream to the browser as server-sent events, and stopping an answer also aborts the model call. A Durable Object guards the budget: it estimates each answer's cost from its token usage and pauses the chat at daily and monthly limits. Visitors are rate-limited by a daily-salted hash of their IP address, so raw addresses are never stored, and conversations stay in the visitor's browser tab rather than on the server.</p>
-          <a href="https://github.com/StefanDokman/Porfolio" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
         </div>
       </div>
     </div>
