@@ -35,6 +35,7 @@ Outsourced mobile games for external clients, shipped to Android with 200,000+ c
 - Car Puzzle: sliding-block car puzzle with grid movement and snapping touch controls.
 - Block Puzzle: Block Blast-style puzzle with placement validation, combo scoring and game-over detection.
 - Backgammon: full rules engine, animated dice and checkers, touch controls with move highlighting.
+- Marble Shooter: marble chain on a spiral path, insertion at the point of impact, gap closing with chain-reaction matches, aim line and next-marble preview.
 
 ## Web Games (multiplayer, PixiJS + Cloudflare Workers)
 
