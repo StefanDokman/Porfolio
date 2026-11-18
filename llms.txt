@@ -2,7 +2,7 @@
 
 > Stefan Dokman is a Unity gameplay developer with 4 years of experience shipping mobile games, with strong shader and rendering skills for low-end Android. He also builds multiplayer web games with PixiJS on Cloudflare Workers.
 
-This file summarizes the projects on the portfolio at https://portfolio.stefandokman.com as plain text. Commercial titles can't be linked: Neuroblast games ship through the company's own Android platform, and Code Havoc titles are under NDA.
+This file summarizes the projects on the portfolio at https://portfolio.stefandokman.com as plain text. Commercial titles can't be linked: Neuroblast games ship through the company's own Android platform, and Code Havoc games were released under clients' own names and brands.
 
 ## Contact
 
@@ -25,12 +25,12 @@ Therapeutic games for motor-skill recovery, played with Neuroblast's Motus contr
 
 ## Code Havoc · Unity Developer · 2022 – 2025
 
-Outsourced mobile games for external clients, shipped to Android with 200,000+ combined downloads. Core gameplay, UI, game logic, device-specific bugs and performance across Android hardware, plus ads, audio and VFX integration. Titles are under NDA, so the names are descriptive.
+Outsourced mobile games for external clients, shipped to Android with 200,000+ combined downloads. Core gameplay, UI, game logic, device-specific bugs and performance across Android hardware, plus ads, audio and VFX integration. The games were released under the clients' own names and brands, so the names here are descriptive.
 
 - [Zero Tenacity](https://www.zerotenacity.com/): client WordPress website maintained for six months; custom WordPress plugins in PHP, the e-commerce page and external API integrations.
 - Golf: PhysX-based ball flight and rolling, an auto-following camera rig, touch aiming and shot power.
 - Match 3: swap matching, cascades and semi-procedural levels with hand-placed special blocks.
-- Brick Breaker: custom ball physics with angle-based paddle control and data-driven levels.
+- Brick Breaker: custom ball physics with angle-based paddle control, data-driven levels, power-ups (lasers, shield, multi-ball), turret bricks that fire back, and a combo multiplier.
 - Runner: level-based runner generated from designed segments, with rewarded, interstitial and banner ads built into the loop.
 - Traffic Puzzle: tap cars marked with direction arrows to clear the streets, with path-based movement through intersections, collisions that cost moves, and a move limit per level.
 - Block Puzzle: Block Blast-style puzzle with placement validation, combo scoring and game-over detection.

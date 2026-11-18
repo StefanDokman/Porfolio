@@ -119,9 +119,9 @@ On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc)
 
 At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also built features for and maintained Zero Tenacity, a client website in WordPress and PHP.
 
-The titles are under NDA. The portfolio therefore uses descriptive names instead of the real game titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All eight games below are Unity mobile games.
+As outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All eight games below are Unity mobile games.
 
-The Code Havoc tab also lists one web project, Zero Tenacity, which is not under NDA and is shown first on the tab.
+The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, first on the tab.
 
 ### Zero Tenacity (Code Havoc, website)
 
@@ -158,6 +158,9 @@ A mobile brick breaker.
 - Custom ball physics with angle-based paddle control.
 - Grid-based levels stored as data, so new layouts can be added without code changes.
 - Configurable gameplay settings.
+- Destroyed bricks can drop power-up capsules, including lasers with a limited number of shots, a shield that blocks the bottom of the screen, and multi-ball.
+- Turret bricks fire back at the paddle until they are destroyed.
+- Chaining hits builds a combo multiplier on the score.
 
 ### Runner (Code Havoc, descriptive name)
 
