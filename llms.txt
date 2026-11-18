@@ -32,7 +32,7 @@ Outsourced mobile games for external clients, shipped to Android with 200,000+ c
 - Match 3: swap matching, cascades and semi-procedural levels with hand-placed special blocks.
 - Brick Breaker: custom ball physics with angle-based paddle control and data-driven levels.
 - Runner: level-based runner generated from designed segments, with rewarded, interstitial and banner ads built into the loop.
-- Car Puzzle: sliding-block car puzzle with grid movement and snapping touch controls.
+- Traffic Puzzle: tap cars marked with direction arrows to clear the streets, with path-based movement through intersections, collisions that cost moves, and a move limit per level.
 - Block Puzzle: Block Blast-style puzzle with placement validation, combo scoring and game-over detection.
 - Backgammon: full rules engine, animated dice and checkers, touch controls with move highlighting.
 - Marble Shooter: marble chain on a spiral path, insertion at the point of impact, gap closing with chain-reaction matches, aim line and next-marble preview.
