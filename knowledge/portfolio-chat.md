@@ -42,7 +42,7 @@ The "Ask AI about my work" chat on the portfolio answers visitors' questions abo
 ## Prompt and behaviour rules
 
 - The system prompt tells the model to answer only from the notes, to say so when the notes don't cover something and suggest emailing Stefan, and never to guess facts.
-- Code Havoc titles and clients are under NDA, so the model must not name or guess them.
+- Code Havoc games were released under the clients' own names and brands, so the model must not name or guess the real titles or the clients.
 - The model talks about Stefan in the third person, keeps answers short, writes plain text, replies in the visitor's language and politely declines unrelated requests.
 - The model runs at low effort, since answering from a small set of notes doesn't need deep reasoning; this keeps answers fast and cheap.
 

@@ -119,7 +119,7 @@ On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc)
 
 At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also built features for and maintained Zero Tenacity, a client website in WordPress and PHP.
 
-As outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so the code can be shown outside the NDA (see Earlier Projects). All eight games below are Unity mobile games.
+As outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so Stefan can show the code, since the originals aren't public (see Earlier Projects). All eight games below are Unity mobile games.
 
 The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, first on the tab.
 
@@ -282,7 +282,7 @@ Personal projects, each shown with a gameplay video. They have no public downloa
 
 ### Match 3 (earlier project, Unity)
 
-A from-scratch personal rebuild of the match-3 game Stefan developed at Code Havoc, made so the code can be shown outside the NDA.
+A from-scratch personal rebuild of the match-3 game Stefan developed at Code Havoc, made so Stefan can show the code, since the original isn't public.
 
 - The board's logical state is kept separate from its presentation.
 - Each move resolves as a sequence of phases: swap, match detection, clear, gravity, refill, cascade check.
@@ -314,7 +314,7 @@ A 2D tank shooter.
 
 ### Brick Breaker (earlier project, Unity)
 
-A from-scratch personal rebuild of the brick breaker Stefan developed at Code Havoc, made so the code can be shown outside the NDA.
+A from-scratch personal rebuild of the brick breaker Stefan developed at Code Havoc, made so Stefan can show the code, since the original isn't public.
 
 - Skips the physics engine: ball movement, collision and reflection are handled with Stefan's own vector and trigonometry math.
 - The ball's bounce angle off the paddle depends on where it hits, which gives the player aim control.
