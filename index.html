@@ -323,6 +323,18 @@ If you have any questions about my projects or just want to connect, feel free t
           <a href="https://slots.stefandokman.com/" target="_blank" rel="noopener noreferrer">Play it online</a>
         </div>
       </div>
+
+      <div class="block normal">
+        <div class="video-container">
+          <video aria-label="Video of the portfolio AI chat" muted loop playsinline preload="none" data-src="placeholder.mp4" width="852" height="480" poster="posters/placeholder.webp"></video>
+        </div>
+        <div class="content">
+          <h2><b>Portfolio AI Chat</b></h2>
+          <div class="techCategory">TypeScript · Cloudflare Workers · Claude API</div>
+          <p>The "Ask AI about my work" assistant on this portfolio, which answers visitors' questions about my projects. It runs on a Cloudflare Worker in TypeScript and calls Claude through the Anthropic SDK. Instead of vector search, every request sends the whole knowledge base, a set of Markdown notes split into sections at build time, as cited documents, so there are no retrieval misses and each answer links its sources back to the matching tab. Prompt caching keeps that repeated prefix cheap. Answers stream to the browser as server-sent events, and stopping an answer also aborts the model call. A Durable Object guards the budget: it estimates each answer's cost from its token usage and pauses the chat at daily and monthly limits. Visitors are rate-limited by a daily-salted hash of their IP address, so raw addresses are never stored, and conversations stay in the visitor's browser tab rather than on the server.</p>
+          <a href="https://github.com/StefanDokman/Porfolio" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
+        </div>
+      </div>
     </div>
     <div class="tab-panel" id="panel-personal-projects" data-panel="personal-projects">
       <div class="block normal">

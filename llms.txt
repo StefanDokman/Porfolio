@@ -45,6 +45,7 @@ Each card game is server-authoritative: every room or table is a Durable Object 
 - [Hold'em](https://holdem.stefandokman.com): Texas Hold'em for up to 10 players with side pots, all-in runouts and split pots; each player only receives their own hole cards.
 - [Blackjack](https://blackjack.stefandokman.com): up to 7 players vs. the dealer, 6-deck shoe, splitting up to four hands, invite links and basic-strategy bots.
 - [Forest Feast](https://slots.stefandokman.com/): single-player 5x3 cascading slot, play money only; a TypeScript port of an open-source Python slot engine resolves every round server-side in a Worker, with a Durable Object wallet per player; free spins with doubled wins, Hold & Spin with four jackpots, about 96% RTP over 10M simulated spins.
+- [Portfolio AI Chat](https://github.com/StefanDokman/Porfolio): the "Ask AI about my work" assistant on this site; a TypeScript Cloudflare Worker calling Claude, sending the whole knowledge base as cited documents with prompt caching instead of vector search, with streamed answers and a Durable Object budget guard.
 
 ## Earlier Projects (Unity, HLSL)
 

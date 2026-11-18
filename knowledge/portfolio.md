@@ -215,6 +215,8 @@ On the site: the Web Games tab (https://portfolio.stefandokman.com/#online-games
 
 Three multiplayer card games and a single-player slot game, all playable in a browser. The three card games share the same architecture: a PixiJS client and a server-authoritative backend on Cloudflare Workers. Every room or table is a Durable Object that runs the full rules engine, turn timers run on server alarms, and the rules are covered by unit tests plus fuzzed or randomized full games. The slot game runs on the same stack: every spin is resolved on the server, and each player's play-money balance is its own Durable Object.
 
+The tab ends with the Portfolio AI Chat entry, which describes the "Ask AI about my work" assistant on the site (TypeScript, Cloudflare Workers, Claude API) and links to its code at https://github.com/StefanDokman/Porfolio. How the chat works is covered in detail in the notes about the portfolio's AI chat.
+
 ### Flip 7 (web game)
 
 - Play it: https://flip7.stefandokman.com
