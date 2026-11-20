@@ -119,7 +119,7 @@ On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc)
 
 At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan owned games end to end, from prototype to release: he built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also maintained and added features to Zero Tenacity, a client website built in WordPress and PHP.
 
-Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. Two of these games, Match 3 and Brick Breaker, were later rebuilt from scratch as personal projects so Stefan can show the code, since the originals aren't public (see Earlier Projects). All eight games below are Unity mobile games.
+Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. One of these games, Match 3, was later rebuilt from scratch as a personal project so Stefan can show the code, since the original isn't public (see Earlier Projects). All eight games below are Unity mobile games.
 
 The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, last on the tab.
 
@@ -314,14 +314,6 @@ A 2D tank shooter.
 - Enemies spawn on a ring just outside the camera's bounds, computed from the viewport, so they never appear on screen.
 - Enemies and projectiles are object-pooled to avoid runtime allocations.
 
-### Brick Breaker (earlier project, Unity)
-
-A from-scratch personal rebuild of the brick breaker Stefan developed at Code Havoc, made so Stefan can show the code, since the original isn't public.
-
-- Skips the physics engine: ball movement, collision and reflection are handled with Stefan's own vector and trigonometry math.
-- The ball's bounce angle off the paddle depends on where it hits, which gives the player aim control.
-- Owning the collision step makes the game's behaviour deterministic and fully tunable.
-
 ### Texture Erosion Shader (earlier project, HLSL)
 
 A dissolve/erosion shader written in HLSL for dissolving cards and VFX.
@@ -337,7 +329,7 @@ An index for questions like "has Stefan worked with X?". Each item names the pro
 
 - Shaders and rendering: vertex shaders that curve the screen or world (Honey Road, Endless Runner); a vertex shader for 2D water waves (Turtle Quest); custom lighting models to reduce shader overhead (Honey Road, World Traveler); dithering-based transparency (Honey Road, World Traveler); distance-based sunset shading (Honey Road); a single-pass toon shader with stylised lighting and outlines (Endless Runner); an HLSL dissolve shader (Texture Erosion Shader); baked lightmaps and light probes (Platformer 3D).
 - Performance and optimization: object pooling (Honey Road, World Traveler, Turtle Quest, Gear Up, Space Scout, Endless Runner, Twin Stick Shooter); custom LOD solutions (World Traveler); performance and device-specific bugs across a wide range of Android hardware (Code Havoc).
-- Physics and movement: Ackermann steering geometry (Honey Road); a configurable vehicle controller (World Traveler); tuned PhysX rigidbody ball physics (Golf); custom physics instead of the physics engine (Brick Breaker rebuild, Endless Runner, Fluffy Rush's jumping and hit reactions); a kinematic character controller (First Person Shooter); custom movement combined with Unity collision detection (Platformer 3D).
+- Physics and movement: Ackermann steering geometry (Honey Road); a configurable vehicle controller (World Traveler); tuned PhysX rigidbody ball physics (Golf); custom physics instead of the physics engine (Endless Runner, Fluffy Rush's jumping and hit reactions); a kinematic character controller (First Person Shooter); custom movement combined with Unity collision detection (Platformer 3D).
 - Cameras: a camera rig with handmade speculative collision detection (World Traveler); a ball-following camera that hands control to the player (Golf).
 - Architecture and data-driven design: ScriptableObject-driven content (Pick It Up, First Person Shooter); levels stored as data (Brick Breaker at Code Havoc); board logic separated from presentation with a phase-based sequencer (Match 3 rebuild); full rules engines (Backgammon, Flip 7, Hold'em, Blackjack); semi-procedural level generation (Match 3 and Runner at Code Havoc).
 - Animation, UI and effects: Bézier-curve animations and a UI height meter (Gear Up); Unity Animator (Fluffy Rush, Endless Runner); particle effects and a UI progress meter (Fairy); touch controls (Golf, Traffic Puzzle, Block Puzzle, Backgammon).

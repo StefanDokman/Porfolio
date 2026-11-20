@@ -54,5 +54,4 @@ Each card game is server-authoritative: every room or table is a Durable Object 
 - Endless Runner: deterministic, physics-free gameplay with a single-pass toon shader that curves the world, pooled track segments and a sliding-window spawner.
 - Platformer 3D: custom movement with Unity collision, moving platforms, baked lightmaps and light probes.
 - Twin Stick Shooter: tank controls and a time-slow ability built on unscaled delta time, with off-screen ring spawning.
-- Brick Breaker: physics-free ball movement and reflection using his own vector math (rebuilt from scratch because the original code isn't public).
 - Texture Erosion Shader: HLSL dissolve shader with a noise mask, direction bias and a two-colour burn edge in one texture sample.
