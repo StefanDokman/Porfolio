@@ -50,7 +50,6 @@ Each card game is server-authoritative: every room or table is a Durable Object 
 ## Earlier Projects (Unity, HLSL)
 
 - First Person Shooter: custom kinematic movement controller; weapons and enemies defined by ScriptableObjects.
-- Match 3: board logic separated from presentation with a phase-based, timer-driven sequencer (rebuilt from scratch because the original code isn't public).
 - Endless Runner: deterministic, physics-free gameplay with a single-pass toon shader that curves the world, pooled track segments and a sliding-window spawner.
 - Platformer 3D: custom movement with Unity collision, moving platforms, baked lightmaps and light probes.
 - Twin Stick Shooter: tank controls and a time-slow ability built on unscaled delta time, with off-screen ring spawning.
