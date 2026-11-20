@@ -119,7 +119,7 @@ On the site: the Code Havoc tab (https://portfolio.stefandokman.com/#code-havoc)
 
 At Code Havoc, Stefan worked on outsourced mobile games for external clients. These games shipped to Android with more than 200,000 combined downloads. Stefan owned games end to end, from prototype to release: he built core gameplay, UI and game logic, handled device-specific bugs and performance across a wide range of Android hardware, and integrated ads, audio and VFX. Stefan also maintained and added features to Zero Tenacity, a client website built in WordPress and PHP.
 
-Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. One of these games, Match 3, was later rebuilt from scratch as a personal project so Stefan can show the code, since the original isn't public (see Earlier Projects). All eight games below are Unity mobile games.
+Because this was outsourced work, the games were released under the clients' own names and brands. The portfolio therefore uses descriptive names instead of the real store titles, shows gameplay videos for every game except Golf, and does not name the clients. All eight games below are Unity mobile games.
 
 The Code Havoc tab also lists one web project, Zero Tenacity, which is shown under its real name, last on the tab.
 
@@ -282,15 +282,6 @@ Personal projects, each shown with a gameplay video. They have no public downloa
 - Built on a custom kinematic movement controller instead of Rigidbody physics, giving frame-consistent acceleration and air control.
 - Weapons and enemies are fully data-driven through ScriptableObjects. Fire mode (full-auto or semi-auto), fire rate and a procedural recoil curve are defined per weapon asset, and enemy stats and collision behaviour per enemy asset, so new variants are added without touching code.
 
-### Match 3 (earlier project, Unity)
-
-A from-scratch personal rebuild of the match-3 game Stefan developed at Code Havoc, made so Stefan can show the code, since the original isn't public.
-
-- The board's logical state is kept separate from its presentation.
-- Each move resolves as a sequence of phases: swap, match detection, clear, gravity, refill, cascade check.
-- A timer-driven sequencer gates input until the animations finish, so the visuals can't drift out of sync with the board.
-- Cascades are handled by re-running match detection after every refill until the board is stable.
-
 ### Endless Runner (earlier project, Unity)
 
 - Deterministic, position-based gameplay with no physics engine.
@@ -331,7 +322,7 @@ An index for questions like "has Stefan worked with X?". Each item names the pro
 - Performance and optimization: object pooling (Honey Road, World Traveler, Turtle Quest, Gear Up, Space Scout, Endless Runner, Twin Stick Shooter); custom LOD solutions (World Traveler); performance and device-specific bugs across a wide range of Android hardware (Code Havoc).
 - Physics and movement: Ackermann steering geometry (Honey Road); a configurable vehicle controller (World Traveler); tuned PhysX rigidbody ball physics (Golf); custom physics instead of the physics engine (Endless Runner, Fluffy Rush's jumping and hit reactions); a kinematic character controller (First Person Shooter); custom movement combined with Unity collision detection (Platformer 3D).
 - Cameras: a camera rig with handmade speculative collision detection (World Traveler); a ball-following camera that hands control to the player (Golf).
-- Architecture and data-driven design: ScriptableObject-driven content (Pick It Up, First Person Shooter); levels stored as data (Brick Breaker at Code Havoc); board logic separated from presentation with a phase-based sequencer (Match 3 rebuild); full rules engines (Backgammon, Flip 7, Hold'em, Blackjack); semi-procedural level generation (Match 3 and Runner at Code Havoc).
+- Architecture and data-driven design: ScriptableObject-driven content (Pick It Up, First Person Shooter); levels stored as data (Brick Breaker at Code Havoc); full rules engines (Backgammon, Flip 7, Hold'em, Blackjack); semi-procedural level generation (Match 3 and Runner at Code Havoc).
 - Animation, UI and effects: Bézier-curve animations and a UI height meter (Gear Up); Unity Animator (Fluffy Rush, Endless Runner); particle effects and a UI progress meter (Fairy); touch controls (Golf, Traffic Puzzle, Block Puzzle, Backgammon).
 - Monetization: rewarded, interstitial and banner ads built into the gameplay loop (Runner); ads, audio and VFX integration (Code Havoc).
 - Multiplayer and backend: server-authoritative multiplayer on Cloudflare Workers with Durable Objects, WebSockets and the WebSocket Hibernation API, server alarms for turn timers, hidden information so players see only their own cards, disconnect and reconnect handling, invite links, and basic-strategy bots (the games on the Web Projects tab).
